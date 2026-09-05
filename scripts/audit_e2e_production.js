@@ -82,7 +82,7 @@ KNOWN_IDS.forEach(id => {
 global.window = global;
 global.window.addEventListener = () => {};
 global.window.removeEventListener = () => {};
-global.location = { origin: 'https://iaworldcenter-creator.github.io', pathname: '/pc-custom-lab/' };
+global.location = { origin: 'https://iaworldcenter-creator.github.io', pathname: '/vectec/' };
 
 global.document = {
     readyState: 'complete',
@@ -281,7 +281,7 @@ console.log('\n--- 6. AUDITORÍA DE ENLACES ECOSISTÉMICOS ---');
 const htmlContent = fs.readFileSync(path.join(BASE_DIR, 'index.html'), 'utf-8');
 const ecosystemLinks = [
     { name: 'Matriz', url: 'https://iaworldcenter-creator.github.io/sitios-web/' },
-    { name: 'Vectec', url: 'https://iaworldcenter-creator.github.io/pc-custom-lab/' },
+    { name: 'Vectec', url: 'https://iaworldcenter-creator.github.io/vectec/' },
     { name: 'Vía MX', url: 'https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/' },
     { name: 'Cigarros', url: 'https://iaworldcenter-creator.github.io/cigarros-bazar/' },
     { name: 'Dulces', url: 'https://iaworldcenter-creator.github.io/dulces-bazar/' },

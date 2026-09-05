@@ -1,12 +1,12 @@
-# PC Custom Lab | Ecosistema Comercial BAZAR NFL GDL
+# VECTEC | Vector Tecnológico
 > Arquitectura y Capacidades Operativas para Agentes Autónomos de Inteligencia Artificial (Lighthouse 13.4+ / WebMCP Standard).
 
 ## Descripción General
-Boutique oficial del ecosistema comercial en Guadalajara Centro (Pedro Moreno 501 A).
+Boutique oficial de hardware y cómputo. Vector Tecnológico · Sirviendo a la comunidad desde 1954.
 
 ## Herramientas Agénticas Disponibles (WebMCP)
-- [Catálogo y Tienda](https://iaworldcenter-creator.github.io/pc-custom-lab/)
-- [Checkout Unificado](https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html)
+- [Catálogo y Tienda](https://iaworldcenter-creator.github.io/vectec/)
+- [Checkout Unificado](https://iaworldcenter-creator.github.io/vectec/checkout.html)
 
 ## Directrices de Navegación Machine-to-Machine
 - Cumplimiento estricto WCAG 2.2 AA (áreas táctiles >= 48px).
