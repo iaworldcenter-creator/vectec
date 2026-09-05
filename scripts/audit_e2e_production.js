@@ -9,7 +9,7 @@ const path = require('path');
 const BASE_DIR = path.resolve(__dirname, '..');
 
 console.log('='.repeat(80));
-console.log('AUDITORIA INTEGRAL DE PRODUCCION Y CERTIFICACION E2E: PC CUSTOM LAB');
+console.log('AUDITORIA INTEGRAL DE PRODUCCION Y CERTIFICACION E2E: VECTEC');
 console.log('='.repeat(80));
 
 // --- ENTORNO DE SIMULACIÓN DOM ROBUSTO ---
@@ -281,7 +281,7 @@ console.log('\n--- 6. AUDITORÍA DE ENLACES ECOSISTÉMICOS ---');
 const htmlContent = fs.readFileSync(path.join(BASE_DIR, 'index.html'), 'utf-8');
 const ecosystemLinks = [
     { name: 'Matriz', url: 'https://iaworldcenter-creator.github.io/sitios-web/' },
-    { name: 'PC Custom Lab', url: 'https://iaworldcenter-creator.github.io/pc-custom-lab/' },
+    { name: 'Vectec', url: 'https://iaworldcenter-creator.github.io/pc-custom-lab/' },
     { name: 'Vía MX', url: 'https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/' },
     { name: 'Cigarros', url: 'https://iaworldcenter-creator.github.io/cigarros-bazar/' },
     { name: 'Dulces', url: 'https://iaworldcenter-creator.github.io/dulces-bazar/' },
@@ -410,17 +410,17 @@ try {
     // ========================================================================
     console.log('\n--- 9. AUDITORÍA DE CABECERA MÓVIL Y BUSCADOR SIN BLOQUEO ---');
     
-    // 9.1 Orden en top-announcement-bar: DEPARTAMENTOS al inicio, PC Custom Lab al final
+    // 9.1 Orden en top-announcement-bar: DEPARTAMENTOS al inicio, VECTEC al final
     const barHTML = htmlContent.substring(htmlContent.indexOf('id="top-announcement-bar"'), htmlContent.indexOf('<!-- Botón Desplazar Derecha'));
     const contentInsideBar = barHTML.substring(barHTML.indexOf('>') + 1).trim();
     const deptIdx = contentInsideBar.indexOf('id="btn-mobile-departments"');
-    const pcCustomIdx = contentInsideBar.indexOf('PC Custom Lab');
+    const pcCustomIdx = contentInsideBar.indexOf('VECTEC') !== -1 ? contentInsideBar.indexOf('VECTEC') : contentInsideBar.indexOf('PC Custom Lab');
     const isDeptFirst = deptIdx !== -1 && deptIdx < 200;
     const isPCLast = pcCustomIdx !== -1 && pcCustomIdx > deptIdx;
 
     if (isDeptFirst && isPCLast) {
-        recordResult('Distribución en Barra Superior (Departamentos primero, PC Custom Lab al final)', 'PASSED',
-            'Departamentos colocado al inicio del riel y PC Custom Lab como cierre final.');
+        recordResult('Distribución en Barra Superior (Departamentos primero, VECTEC al final)', 'PASSED',
+            'Departamentos colocado al inicio del riel y VECTEC como cierre final.');
     } else {
         recordResult('Distribución en Barra Superior', 'FAILED', `deptIdx=${deptIdx}, pcCustomIdx=${pcCustomIdx}`);
     }

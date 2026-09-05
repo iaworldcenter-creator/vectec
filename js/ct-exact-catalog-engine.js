@@ -1848,7 +1848,7 @@ function renderSidebarFacets() {
                 <div id="sidebar-qr-container" class="relative mt-2 p-3 bg-gradient-to-b from-slate-950 to-slate-900 border border-cyan-500/40 rounded-2xl shadow-lg text-center space-y-2.5">
                     <div class="flex items-center justify-between gap-1 border-b border-slate-800/80 pb-1.5">
                         <span class="text-[10.5px] font-mono font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
-                            <i class="fa-solid fa-qrcode text-cyan-400"></i> App PC Custom Lab
+                            <i class="fa-solid fa-qrcode text-cyan-400"></i> App Vectec
                         </span>
                         <span class="text-[9px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold">Descarga</span>
                     </div>
@@ -1856,7 +1856,7 @@ function renderSidebarFacets() {
                     <div class="p-2 bg-white rounded-xl shadow-inner cursor-pointer hover:scale-105 transition-transform duration-200 inline-block mx-auto border border-slate-700" onclick="window.toggleQrModal(true)" title="Clic para ampliar código QR">
                         <img 
                             src="assets/img/codigo_qr_bazar_nfl.png" 
-                            alt="Código QR Oficial PC Custom Lab y BAZAR NFL GDL" 
+                            alt="Código QR Oficial Vectec y BAZAR NFL GDL" 
                             width="110" 
                             height="110" 
                             class="w-[110px] h-[110px] object-contain rounded-lg mx-auto block" 
@@ -2380,8 +2380,8 @@ window.addToCartCT = function(sku, event) {
                 quantity: 1,
                 img: `./assets/img/${p.sku}.webp`,
                 image: `./assets/img/${p.sku}.webp`,
-                storeName: 'PC Custom Lab',
-                tienda_origen: 'PC Custom Lab',
+                storeName: 'Vectec',
+                tienda_origen: 'Vectec',
                 storeUrl: window.location.origin + window.location.pathname,
                 url_tienda: window.location.origin + window.location.pathname
             });
@@ -2422,8 +2422,8 @@ window.buyNowCT = function(sku, event) {
                     quantity: 1,
                     img: `./assets/img/${p.sku}.webp`,
                     image: `./assets/img/${p.sku}.webp`,
-                    storeName: 'PC Custom Lab',
-                    tienda_origen: 'PC Custom Lab',
+                    storeName: 'Vectec',
+                    tienda_origen: 'Vectec',
                     storeUrl: window.location.origin + window.location.pathname,
                     url_tienda: window.location.origin + window.location.pathname
                 });
@@ -2564,7 +2564,7 @@ window.openProductDetailModal = function(sku) {
         content.innerHTML = `
             <div class="flex justify-between items-center pb-3 border-b border-slate-800 mb-4">
                 <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
-                    <i class="fa-solid fa-microchip mr-1.5 text-cyan-400"></i> Ficha Técnica Oficial • PC Custom Lab
+                    <i class="fa-solid fa-microchip mr-1.5 text-cyan-400"></i> Ficha Técnica Oficial • Vectec
                 </span>
                 <button onclick="closeProductDetailModal()" aria-label="Cerrar modal" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-red-950 text-slate-300 hover:text-red-400 flex items-center justify-center transition cursor-pointer min-h-[44px]">
                     <i class="fa-solid fa-xmark"></i>
@@ -2626,7 +2626,7 @@ window.openProductDetailModal = function(sku) {
                                 </span>
                             ` : ''}
                             <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-0.5 rounded-full">
-                                Marca: ${(p.marca && p.marca.toUpperCase() !== 'CT') ? p.marca : 'Certificada PC Custom'}
+                                Marca: ${(p.marca && p.marca.toUpperCase() !== 'CT') ? p.marca : 'Certificada Vectec'}
                             </span>
                         </div>
 
@@ -2646,7 +2646,7 @@ window.openProductDetailModal = function(sku) {
 
                         <div class="w-full bg-slate-950/90 text-slate-300 border border-cyan-500/30 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow font-mono text-[11px]">
                             <span class="flex items-center gap-1.5 text-cyan-300 font-bold">
-                                <i class="fa-solid fa-certificate text-cyan-400"></i> Ficha Técnica Nativa PC Custom Lab
+                                <i class="fa-solid fa-certificate text-cyan-400"></i> Ficha Técnica Nativa Vectec
                             </span>
                             <span class="text-emerald-400 font-bold flex items-center gap-1">
                                 <i class="fa-solid fa-shield-check"></i> Garantía y Facturación SAT

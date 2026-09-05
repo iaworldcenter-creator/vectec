@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PC Custom Lab | Hardware & Ensambles | Carrito de Compras & Pago Seguro</title>
-    <meta name="description" content="Proceso de compra seguro para PC CUSTOM LAB. Entregas express en Guadalajara vía Uber Flash y envíos nacionales asegurados.">
+    <title>Vectec | Vector Tecnológico | Carrito de Compras & Pago Seguro</title>
+    <meta name="description" content="Proceso de compra seguro para VECTEC. Vector Tecnológico · Sirviendo a la comunidad desde 1954.">
     <!-- WEBMCP AGENTIC MANIFEST (LIGHTHOUSE 13.4+ NAVEGACIÓN AGÉNTICA) -->
     <link rel="alternate" type="text/plain" href="llms.txt" title="WebMCP Agent Manifest" />
     
@@ -90,7 +90,7 @@
                         <i class="fa-solid fa-house text-amber-400 mr-1.5"></i> Matriz
                     </a>
                     <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-slate-800 transition flex items-center">
-                        <i class="fa-solid fa-microchip text-cyan-400 mr-1.5"></i> PC Custom
+                        <i class="fa-solid fa-microchip text-cyan-400 mr-1.5"></i> Vectec
                     </a>
                     <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition flex items-center">
                         <i class="fa-solid fa-gem text-cyan-300 mr-1.5"></i> Vía MX
@@ -124,12 +124,12 @@
         <div class="w-full bg-slate-950/95">
             <div class="max-w-[1440px] mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-4">
                 <a href="index.html" class="flex items-center gap-2.5 group">
-                    <div class="w-10 h-10 rounded-xl bg-slate-900 border border-cyan-500/40 p-1 flex items-center justify-center shrink-0">
-                        <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo PC CUSTOM LAB" width="36" height="36" class="w-full h-full object-contain" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-950 to-slate-900 border border-cyan-400/60 p-1 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(6,182,212,0.25)] group-hover:border-cyan-300 transition">
+                        <i class="fa-solid fa-microchip text-cyan-400 text-lg"></i>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-xs sm:text-sm font-black font-mono text-white tracking-wider uppercase group-hover:text-cyan-400 transition">PC CUSTOM LAB</span>
-                        <span class="text-[9px] font-mono text-slate-300">Hardware Mayorista & Ensamble de Cómputo</span>
+                        <span class="text-xs sm:text-sm font-black font-mono text-white tracking-wider uppercase group-hover:text-cyan-400 transition">VECTEC</span>
+                        <span class="text-[9px] font-mono text-slate-300">Vector Tecnológico · Sirviendo a la comunidad desde 1954</span>
                     </div>
                 </a>
 
@@ -443,7 +443,7 @@
                 <span>💬 WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="hover:text-emerald-300 font-bold text-white transition">+52 33 3727 1440</a></span>
             </div>
             <div class="text-slate-400 text-[11px]">
-                © 2026 Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab. Todos los derechos reservados.
+                © 2026 Vectec. Sirviendo a la comunidad desde 1954.
             </div>
         </div>
     </footer>
@@ -715,7 +715,7 @@
                         image: item.image || item.imagen || item.img || './assets/img/placeholders/acc_placeholder.jpg',
                         cdn_url: item.cdn_url || (item.sku ? `https://static.ctonline.mx/imagenes/${item.sku}/${item.sku}_800.jpg` : ''),
                         store: item.store || 'pc-custom-lab',
-                        storeName: item.storeName || 'PC Custom Lab'
+                        storeName: item.storeName || 'Vectec'
                     };
                 });
             } catch(e) { return []; }
@@ -784,7 +784,7 @@
                         <!-- DESCRIPCIÓN AMPLIA Y CARACTERÍSTICAS -->
                         <div class="flex-1 min-w-0">
                             <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-0.5">
-                                <i class="fa-solid fa-microchip mr-1"></i> ${p.storeName || 'PC Custom Lab'}
+                                <i class="fa-solid fa-microchip mr-1"></i> ${p.storeName || 'Vectec'}
                             </span>
                             <h3 class="text-xs sm:text-sm font-bold text-white leading-snug mb-1">${title}</h3>
                             <div class="flex flex-wrap items-center gap-2 text-[10.5px] font-mono text-slate-300 mb-1">
@@ -964,15 +964,15 @@
             const itemsText = items.map((i, idx) => `${idx + 1}. [${i.sku}] ${i.name} (x${i.quantity}) - $${((i.quantity >= 10 ? i.price * 0.93 : i.price) * i.quantity).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`).join('\n');
 
             if (currentPaymentMethod === 'tarjeta') {
-                const msg = `💳 *PEDIDO PC CUSTOM LAB - MERCADO PAGO*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos Solicitados:*\n${itemsText}\n\n📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n🚚 *Envío:* ${shipping === 0 ? 'GRATIS' : '$' + shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 }) + ' MXN'}\n💰 *Total a Liquidar:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Solicito link de cobro seguro de Mercado Pago._`;
+                const msg = `💳 *PEDIDO VECTEC - MERCADO PAGO*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos Solicitados:*\n${itemsText}\n\n📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n🚚 *Envío:* ${shipping === 0 ? 'GRATIS' : '$' + shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 }) + ' MXN'}\n💰 *Total a Liquidar:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Solicito link de cobro seguro de Mercado Pago._`;
                 const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
                 window.open(waUrl, '_blank');
             } else if (currentPaymentMethod === 'spei') {
-                const msg = `🏛️ *PEDIDO PC CUSTOM LAB - PAGO SPEI*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos:*\n${itemsText}\n\n📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n🚚 *Envío:* ${shipping === 0 ? 'GRATIS' : '$' + shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 }) + ' MXN'}\n💰 *Total a Transferir:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Adjunto mi comprobante de transferencia BBVA CLABE: 012 180 01542584394 9._`;
+                const msg = `🏛️ *PEDIDO VECTEC - PAGO SPEI*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos:*\n${itemsText}\n\n📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n🚚 *Envío:* ${shipping === 0 ? 'GRATIS' : '$' + shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 }) + ' MXN'}\n💰 *Total a Transferir:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Adjunto mi comprobante de transferencia BBVA CLABE: 012 180 01542584394 9._`;
                 const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
                 window.open(waUrl, '_blank');
             } else {
-                const msg = `🏪 *PEDIDO PC CUSTOM LAB - PAGO EFECTIVO OXXO*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos:*\n${itemsText}\n\n💰 *Total a Pagar en Caja:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Solicito código de barras / referencia digital OXXO Pay._`;
+                const msg = `🏪 *PEDIDO VECTEC - PAGO EFECTIVO OXXO*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos:*\n${itemsText}\n\n💰 *Total a Pagar en Caja:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Solicito código de barras / referencia digital OXXO Pay._`;
                 const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
                 window.open(waUrl, '_blank');
             }

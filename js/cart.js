@@ -198,7 +198,7 @@
             const price = parseFloat(item.price || item.precio) || 0;
             const qty = parseInt(item.qty || item.quantity) || 1;
             const itemSubtotal = price * qty;
-            const storeName = item.storeName || item.tienda_origen || 'PC Custom Lab';
+            const storeName = item.storeName || item.tienda_origen || 'Vectec';
             const img = item.img || item.image || `assets/img/${sku}.webp`;
 
             return `
