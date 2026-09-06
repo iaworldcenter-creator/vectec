@@ -79,7 +79,7 @@ function executeMasterSearchInstant(e) {
                             width="48" 
                             height="48" 
                             class="w-full h-full object-contain group-hover:scale-110 transition duration-200" 
-                            onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';" 
+                            onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/vectec/assets/img/mascota_tigre_thumb.webp';" 
                         />
                     </div>
                     <div class="flex flex-col min-w-0">
