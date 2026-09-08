@@ -1,10 +1,10 @@
 /**
- * CATALOG WEB WORKER - PC CUSTOM LAB
+ * CATALOG WEB WORKER - VECTEC
  * Procesa la carga de particiones JSON, búsquedas semánticas con scoring,
  * filtros de departamento, presupuesto y ordenamiento FUERA DEL HILO PRINCIPAL.
  * 
  * Resuelve rutas absolutas automáticamente según self.location para soportar
- * subcarpetas en GitHub Pages (ej. /pc-custom-lab/).
+ * subcarpetas en GitHub Pages (ej. /VECTEC/).
  */
 
 let manifest = null;

@@ -1,6 +1,6 @@
 /**
  * AUDITORÍA INTEGRAL DE PRODUCCIÓN Y PRUEBAS AUTOMATIZADAS DE ESTABILIDAD (E2E)
- * PC CUSTOM LAB - SISTEMA DE ALTA DISPONIBILIDAD
+ * VECTEC - SISTEMA DE ALTA DISPONIBILIDAD
  */
 
 const fs = require('fs');
@@ -414,7 +414,7 @@ try {
     const barHTML = htmlContent.substring(htmlContent.indexOf('id="top-announcement-bar"'), htmlContent.indexOf('<!-- Botón Desplazar Derecha'));
     const contentInsideBar = barHTML.substring(barHTML.indexOf('>') + 1).trim();
     const deptIdx = contentInsideBar.indexOf('id="btn-mobile-departments"');
-    const pcCustomIdx = contentInsideBar.indexOf('VECTEC') !== -1 ? contentInsideBar.indexOf('VECTEC') : contentInsideBar.indexOf('PC Custom Lab');
+    const pcCustomIdx = contentInsideBar.indexOf('VECTEC') !== -1 ? contentInsideBar.indexOf('VECTEC') : contentInsideBar.indexOf('VECTEC');
     const isDeptFirst = deptIdx !== -1 && deptIdx < 200;
     const isPCLast = pcCustomIdx !== -1 && pcCustomIdx > deptIdx;
 

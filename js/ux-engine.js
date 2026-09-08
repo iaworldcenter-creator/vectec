@@ -1,5 +1,5 @@
 /**
- * UX & Fuzzy Search Engine v3.0 - PC Custom Lab & Ecosistema de Tiendas
+ * UX & Fuzzy Search Engine v3.0 - VECTEC & Ecosistema de Tiendas
  * Motor de Búsqueda Inteligente, Tolerante a Errores Ortográficos (Levenshtein),
  * Limpieza de Stopwords, Diccionario de Sinónimos y Live Autocomplete con Compra en 1 Clic.
  */

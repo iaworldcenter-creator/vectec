@@ -1,5 +1,5 @@
 // =========================================================================
-// MOTOR DE INTERFAZ UI/UX DE ALTO RENDIMIENTO PARA PC CUSTOM LAB
+// MOTOR DE INTERFAZ UI/UX DE ALTO RENDIMIENTO PARA VECTEC
 // (Alternador Grid/List, Filtros Facetados, Price Slider, Paginación Dinámica)
 // =========================================================================
 

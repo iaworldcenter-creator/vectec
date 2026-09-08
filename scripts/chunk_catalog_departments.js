@@ -1,6 +1,6 @@
 /**
  * CHUNK CATALOG DEPARTMENTS
- * Divide el catálogo masivo de PC Custom Lab (17,490 productos) en particiones JSON
+ * Divide el catálogo masivo de VECTEC (17,490 productos) en particiones JSON
  * ligeras por departamento (< 350 KB, límite estricto 400 KB) para permitir descargas y consultas
  * en segundo plano a través de Web Workers.
  */

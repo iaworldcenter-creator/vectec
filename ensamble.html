@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Ensamble Dinámico | VECTEC Hardware Guadalajara</title>
+    <meta name="description" content="Configura tu PC Gamer o Estación de Trabajo personalizada con validación de compatibilidad en tiempo real en VECTEC. Pedro Moreno 501 A, Guadalajara Centro.">
+    <link rel="canonical" href="https://iaworldcenter-creator.github.io/vectec/ensamble.html">
+
+    <!-- Fuentes y Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/shared-flyout.css">
+
+    <style>
+        *, ::after, ::before { box-sizing: border-box; }
+        body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; background-color: #030712; color: #f8fafc; min-height: 100vh; }
+        .step-card { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .step-card:hover { border-color: rgba(56, 189, 248, 0.6); }
+        .step-card.selected { border-color: #38bdf8; background: rgba(14, 116, 144, 0.15); box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0b1329; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+    </style>
+</head>
+<body class="pb-36">
+
+    <!-- ENCABEZADO OFICIAL VECTEC -->
+    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+            <!-- LOGO VECTEC -->
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-700 flex items-center justify-center font-black text-white text-lg tracking-wider shadow-lg shadow-cyan-500/20">
+                    VT
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-widest text-white block leading-none">VECTEC</span>
+                    <span class="text-[10px] font-mono tracking-wider text-cyan-400 font-semibold uppercase">Hardware Mayorista · GDL</span>
+                </div>
+            </a>
+
+            <!-- NAVEGACIÓN Y MENÚ FLYOUT -->
+            <div class="hidden md:flex items-center gap-4">
+                <div id="vectec-flyout-container"></div>
+                <a href="mostrador.html" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono font-bold text-cyan-300 flex items-center gap-2 transition">
+                    <i class="fa-solid fa-cash-register text-cyan-400"></i> Modo Mostrador
+                </a>
+            </div>
+
+            <!-- BOTONES SUPERIORES -->
+            <div class="flex items-center gap-3">
+                <a href="checkout.html" class="relative p-2.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-400 text-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping text-cyan-400"></i>
+                    <span class="cart-counter-badge hidden text-xs font-mono font-bold bg-cyan-500 text-slate-950 px-1.5 rounded-full">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO DE LA MATRIZ DE ENSAMBLE -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-bold mb-3">
+            <i class="fa-solid fa-wrench"></i> VECTEC PC BUILDER ENGINE v2.0
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight">
+            Matriz de Ensamble <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Dinámico & Compatibilidad</span>
+        </h1>
+        <p class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto mt-2">
+            Selecciona componentes en tiempo real. La matriz filtra automáticamente sockets, tipos de memoria RAM y calcula el consumo de energía para garantizar compatibilidad del 100%.
+        </p>
+
+        <!-- INDICADOR DE COMPATIBILIDAD ACTIVA -->
+        <div id="compatibility-badge-bar" class="mt-4 inline-flex flex-wrap items-center justify-center gap-3 text-xs font-mono bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-2xl">
+            <span class="text-slate-400">Socket Seleccionado: <strong id="lbl-current-socket" class="text-cyan-300">Pendiente</strong></span>
+            <span class="text-slate-600">•</span>
+            <span class="text-slate-400">Tipo de Memoria: <strong id="lbl-current-ram" class="text-purple-300">Pendiente</strong></span>
+            <span class="text-slate-600">•</span>
+            <span class="text-slate-400">Potencia Mínima Requerida: <strong id="lbl-current-power" class="text-emerald-300">450W</strong></span>
+        </div>
+    </section>
+
+    <!-- SELECTOR PASO A PASO (MATRIZ) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-8">
+
+        <!-- PASO 1: PROCESADOR (CPU) -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl" id="step-cpu">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 flex items-center justify-center font-bold font-mono">1</div>
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                            <span>Procesador (CPU)</span>
+                            <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950 px-2 py-0.5 rounded border border-cyan-800/60">Paso Fundamental</span>
+                        </h2>
+                        <p class="text-xs text-slate-400">Define la plataforma de ensamble (Intel LGA1851/1700 o AMD AM5/AM4).</p>
+                    </div>
+                </div>
+                <!-- Filtros rápidos de marca -->
+                <div class="flex items-center gap-2 text-xs font-mono">
+                    <button type="button" onclick="filterCPU('all')" class="cpu-filter-btn px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 font-bold hover:bg-slate-700 active">Todos</button>
+                    <button type="button" onclick="filterCPU('INTEL')" class="cpu-filter-btn px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-bold hover:bg-slate-700">Intel</button>
+                    <button type="button" onclick="filterCPU('AMD')" class="cpu-filter-btn px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-bold hover:bg-slate-700">AMD</button>
+                </div>
+            </div>
+            <!-- Grid de CPUs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-2" id="grid-cpus">
+                <div class="p-8 text-center text-slate-500 font-mono text-xs col-span-full">Cargando procesadores VECTEC...</div>
+            </div>
+        </div>
+
+        <!-- PASO 2: TARJETA MADRE (MOTHERBOARD) -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl" id="step-mb">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center justify-center font-bold font-mono">2</div>
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                            <span>Tarjeta Madre (Motherboard)</span>
+                            <span id="mb-socket-notice" class="text-[10px] font-mono text-purple-400 bg-purple-950 px-2 py-0.5 rounded border border-purple-800/60">Compatible con Socket CPU</span>
+                        </h2>
+                        <p class="text-xs text-slate-400">Filtradas automáticamente por el socket y chipset compatible.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-2" id="grid-mbs">
+                <div class="p-8 text-center text-slate-500 font-mono text-xs col-span-full">Selecciona un procesador para ver tarjetas madre compatibles.</div>
+            </div>
+        </div>
+
+        <!-- PASO 3: MEMORIA RAM -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl" id="step-ram">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center font-bold font-mono">3</div>
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-white">Memoria RAM</h2>
+                        <p class="text-xs text-slate-400">Módulos de alto rendimiento certificados DDR4 o DDR5.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-2" id="grid-rams">
+                <div class="p-8 text-center text-slate-500 font-mono text-xs col-span-full">Cargando opciones de memoria RAM...</div>
+            </div>
+        </div>
+
+        <!-- PASO 4: ALMACENAMIENTO (M.2 NVMe / SSD) -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl" id="step-ssd">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/40 flex items-center justify-center font-bold font-mono">4</div>
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-white">Almacenamiento SSD M.2 / NVMe</h2>
+                        <p class="text-xs text-slate-400">Unidades de estado sólido de alta velocidad de lectura/escritura.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-2" id="grid-storage">
+                <div class="p-8 text-center text-slate-500 font-mono text-xs col-span-full">Cargando unidades de almacenamiento...</div>
+            </div>
+        </div>
+
+        <!-- PASO 5: TARJETA DE VIDEO (GPU) -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl" id="step-gpu">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center justify-center font-bold font-mono">5</div>
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-white">Tarjeta de Video (GPU)</h2>
+                        <p class="text-xs text-slate-400">Potencia gráfica NVIDIA GeForce y AMD Radeon.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-2" id="grid-gpus">
+                <div class="p-8 text-center text-slate-500 font-mono text-xs col-span-full">Cargando tarjetas de video...</div>
+            </div>
+        </div>
+
+        <!-- PASO 6: FUENTE DE PODER (PSU) -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl" id="step-psu">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-rose-500/20 text-rose-400 border border-rose-500/40 flex items-center justify-center font-bold font-mono">6</div>
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-white">Fuente de Poder (PSU)</h2>
+                        <p class="text-xs text-slate-400">Alimentación eléctrica certificada con watts recomendados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-2" id="grid-psus">
+                <div class="p-8 text-center text-slate-500 font-mono text-xs col-span-full">Cargando fuentes de poder...</div>
+            </div>
+        </div>
+
+        <!-- PASO 7: GABINETE & ENFRIAMIENTO -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl" id="step-case">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-500/40 flex items-center justify-center font-bold font-mono">7</div>
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-white">Gabinete Gamer VECTEC</h2>
+                        <p class="text-xs text-slate-400">Chasis torre con paneles de cristal templado y ventilación ARGB.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-2" id="grid-cases">
+                <div class="p-8 text-center text-slate-500 font-mono text-xs col-span-full">Cargando gabinetes...</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- BARRA FLOTANTE INFERIOR CON SUBTOTAL Y CIERRE POR WHATSAPP -->
+    <footer class="fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-xl border-t border-cyan-500/40 shadow-2xl p-4 sm:p-5">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- CONTADOR DE PIEZAS Y RESUMEN -->
+            <div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
+                <div>
+                    <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Progreso del Ensamble:</div>
+                    <div class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                        <span id="selected-parts-count" class="text-cyan-400">0</span> de 7 componentes seleccionados
+                    </div>
+                </div>
+                <div class="sm:border-l sm:border-slate-800 sm:pl-4">
+                    <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Inversión Estimada:</div>
+                    <div class="text-lg sm:text-2xl font-black font-mono text-emerald-400" id="builder-total-price">
+                        $0.00 MXN
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN (WHATSAPP & CARRITO) -->
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+                <button type="button" onclick="addBuildToCart()" class="flex-1 sm:flex-initial px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Añadir Ensamble</span>
+                </button>
+                <button type="button" onclick="checkoutBuildViaWhatsApp()" class="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs uppercase tracking-wider shadow-lg shadow-emerald-500/25 transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Comprar por WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS COMPARTIDOS -->
+    <script src="js/shared-cart-whatsapp.js"></script>
+    <script src="js/shared-flyout.js"></script>
+
+    <!-- MOTOR DE LA MATRIZ DE ENSAMBLE -->
+    <script>
+        let hardwareDB = null;
+        let selectedBuild = {
+            cpu: null,
+            mb: null,
+            ram: null,
+            ssd: null,
+            gpu: null,
+            psu: null,
+            case: null
+        };
+
+        let currentSocket = null;
+        let currentRamType = null;
+        let recommendedWatts = 450;
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            await loadHardwareData();
+            renderCategory("procesadores", "grid-cpus", "cpu");
+            renderCategory("memorias_ram", "grid-rams", "ram");
+            renderCategory("almacenamiento", "grid-storage", "ssd");
+            renderCategory("tarjetas_video", "grid-gpus", "gpu");
+            renderCategory("fuentes_poder", "grid-psus", "psu");
+            renderCategory("gabinetes", "grid-cases", "case");
+        });
+
+        async function loadHardwareData() {
+            try {
+                const res = await fetch("data/hardware_ensamble.json");
+                hardwareDB = await res.json();
+            } catch (e) {
+                console.error("Error al cargar hardware_ensamble.json:", e);
+            }
+        }
+
+        function renderCategory(catKey, containerId, slotKey, filterFn = null) {
+            const container = document.getElementById(containerId);
+            if (!container || !hardwareDB || !hardwareDB[catKey]) return;
+
+            let items = hardwareDB[catKey];
+            if (filterFn) {
+                items = items.filter(filterFn);
+            }
+
+            if (items.length === 0) {
+                container.innerHTML = `<div class="p-6 text-center text-slate-500 font-mono text-xs col-span-full">No hay componentes disponibles con la compatibilidad actual.</div>`;
+                return;
+            }
+
+            container.innerHTML = items.slice(0, 18).map(item => {
+                const isSelected = selectedBuild[slotKey] && selectedBuild[slotKey].sku === item.sku;
+                return `
+                    <div class="step-card bg-slate-950/80 border border-slate-800 rounded-2xl p-4 flex gap-3 cursor-pointer ${isSelected ? 'selected' : ''}" onclick="selectComponent('${slotKey}', '${item.sku}', ${item.precio}, '${escapeJs(item.nombre)}', '${item.socket || ''}', '${item.ram_type || ''}', ${item.watts_req || item.watts || 0})">
+                        <img src="${item.imagen || 'assets/img/placeholders/acc_placeholder.jpg'}" alt="${escapeHtml(item.nombre)}" class="w-16 h-16 object-contain bg-slate-900 rounded-xl p-1 shrink-0 border border-slate-800" onerror="this.src='assets/img/placeholders/acc_placeholder.jpg'" />
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-1.5 mb-1">
+                                <span class="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60">${item.sku}</span>
+                                ${item.socket ? `<span class="text-[9px] font-mono text-purple-300">${item.socket}</span>` : ''}
+                                ${item.ram_type ? `<span class="text-[9px] font-mono text-emerald-300">${item.ram_type}</span>` : ''}
+                            </div>
+                            <h4 class="text-xs font-semibold text-white line-clamp-2 leading-snug mb-1.5">${escapeHtml(item.nombre)}</h4>
+                            <div class="flex items-center justify-between">
+                                <span class="font-mono font-black text-emerald-400 text-xs sm:text-sm">$${item.precio.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
+                                <span class="text-[10px] font-mono font-bold ${isSelected ? 'text-cyan-400' : 'text-slate-500'}">
+                                    ${isSelected ? '<i class="fa-solid fa-circle-check text-cyan-400"></i> Elegido' : 'Elegir'}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function selectComponent(slotKey, sku, price, name, socket, ramType, power) {
+            selectedBuild[slotKey] = { sku, price, name, socket, ramType, power };
+
+            // Si es CPU, actualizar socket y filtrar tarjetas madre compatibles
+            if (slotKey === 'cpu') {
+                currentSocket = socket || null;
+                currentRamType = ramType || null;
+                document.getElementById("lbl-current-socket").innerText = currentSocket || 'Universal';
+                document.getElementById("lbl-current-ram").innerText = currentRamType || 'DDR4/DDR5';
+
+                // Filtrar Motherboards por socket
+                renderCategory("tarjetas_madre", "grid-mbs", "mb", (mb) => {
+                    if (!currentSocket || currentSocket === 'UNIVERSAL') return true;
+                    return mb.socket === currentSocket || mb.socket === 'UNIVERSAL';
+                });
+            }
+
+            // Si es GPU, actualizar requerimiento de watts
+            if (slotKey === 'gpu' && power) {
+                recommendedWatts = Math.max(450, power);
+                document.getElementById("lbl-current-power").innerText = `${recommendedWatts}W`;
+            }
+
+            updateBuildSummary();
+
+            // Re-renderizar la sección actual para reflejar la selección visual
+            const sectionMap = {
+                cpu: ["procesadores", "grid-cpus"],
+                mb: ["tarjetas_madre", "grid-mbs"],
+                ram: ["memorias_ram", "grid-rams"],
+                ssd: ["almacenamiento", "grid-storage"],
+                gpu: ["tarjetas_video", "grid-gpus"],
+                psu: ["fuentes_poder", "grid-psus"],
+                case: ["gabinetes", "grid-cases"]
+            };
+            if (sectionMap[slotKey]) {
+                renderCategory(sectionMap[slotKey][0], sectionMap[slotKey][1], slotKey);
+            }
+        }
+
+        function updateBuildSummary() {
+            let count = 0;
+            let total = 0;
+
+            for (const key in selectedBuild) {
+                if (selectedBuild[key]) {
+                    count++;
+                    total += selectedBuild[key].price;
+                }
+            }
+
+            document.getElementById("selected-parts-count").innerText = count;
+            document.getElementById("builder-total-price").innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+        }
+
+        function addBuildToCart() {
+            let count = 0;
+            for (const key in selectedBuild) {
+                if (selectedBuild[key]) count++;
+            }
+            if (count === 0) {
+                alert("⚠️ Selecciona al menos un componente para agregar a tu canasta.");
+                return;
+            }
+
+            let cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || '[]');
+            for (const key in selectedBuild) {
+                const p = selectedBuild[key];
+                if (p) {
+                    cart.push({
+                        sku: p.sku,
+                        id: p.sku,
+                        nombre: `[ENSAMBLE] ${p.name}`,
+                        title: `[ENSAMBLE] ${p.name}`,
+                        precio: p.price,
+                        price: p.price,
+                        quantity: 1,
+                        qty: 1
+                    });
+                }
+            }
+            localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
+            localStorage.setItem('cart_items', JSON.stringify(cart));
+            if (window.SharedCart) window.SharedCart.updateBadges();
+            alert(`🛒 ¡Ensamble (${count} componentes) agregado a tu canasta VECTEC!`);
+        }
+
+        function checkoutBuildViaWhatsApp() {
+            let count = 0;
+            let total = 0;
+            let itemsBreakdown = [];
+
+            for (const key in selectedBuild) {
+                const p = selectedBuild[key];
+                if (p) {
+                    count++;
+                    total += p.price;
+                    itemsBreakdown.push(`• [${p.sku}] ${p.name} - $${p.price.toLocaleString('es-MX')} MXN`);
+                }
+            }
+
+            if (count === 0) {
+                alert("⚠️ Por favor selecciona los componentes que deseas ensamblar.");
+                return;
+            }
+
+            const msg = `*🛠️ COTIZACIÓN DE ENSAMBLE VECTEC (Pedro Moreno 501 A)*%0A` +
+                `━━━━━━━━━━━━━━━━━━━━━━━━━━%0A` +
+                `⚙️ *Componentes Seleccionados (${count}/7):*%0A` +
+                itemsBreakdown.join('%0A') + `%0A` +
+                `━━━━━━━━━━━━━━━━━━━━━━━━━━%0A` +
+                `🔌 *Socket:* ${currentSocket || 'Estándar'} | *RAM:* ${currentRamType || 'Estándar'} | *Fuente:* ${recommendedWatts}W%0A` +
+                `💰 *TOTAL ESTIMADO: $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN*%0A` +
+                `━━━━━━━━━━━━━━━━━━━━━━━━━━%0A` +
+                `_Hola VECTEC, solicito confirmación de stock y tiempo de ensamble para entrega en mostrador o envío local._`;
+
+            window.open(`https://wa.me/523337271440?text=${msg}`, '_blank');
+        }
+
+        function filterCPU(brand) {
+            document.querySelectorAll(".cpu-filter-btn").forEach(btn => {
+                btn.classList.remove("active");
+                if (btn.innerText.toUpperCase() === brand || (brand === 'all' && btn.innerText === 'Todos')) {
+                    btn.classList.add("active");
+                }
+            });
+            renderCategory("procesadores", "grid-cpus", "cpu", (item) => {
+                if (brand === 'all') return true;
+                return item.nombre.toUpperCase().includes(brand);
+            });
+        }
+
+        function escapeHtml(str) {
+            if (!str) return "";
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+        }
+
+        function escapeJs(str) {
+            if (!str) return "";
+            return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
+        }
+    </script>
+</body>
+</html>

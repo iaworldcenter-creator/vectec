@@ -2,7 +2,7 @@ import json
 import os
 from generate_all_catalog_pages import CATALOG_DATA
 
-output_path = r"E:\sitios web\pc-custom-lab\catalogo.html"
+output_path = r"E:\sitios web\VECTEC\catalogo.html"
 
 # Generar JSON de todos los 220 productos para el catálogo interactivo
 catalog_json = json.dumps(CATALOG_DATA, ensure_ascii=False, indent=2)
@@ -12,8 +12,8 @@ html_content = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Maestro de Hardware (11 Secciones) — PC Custom Lab</title>
-    <meta name="description" content="Explora las 11 secciones de componentes de PC Custom Lab: Tarjetas Madre, Procesadores, GPUs, RAM, Almacenamiento, Fuentes, Gabinetes, Enfriamiento, Periféricos, Redes y Monitores/Software.">
+    <title>Catálogo Maestro de Hardware (11 Secciones) — VECTEC</title>
+    <meta name="description" content="Explora las 11 secciones de componentes de VECTEC: Tarjetas Madre, Procesadores, GPUs, RAM, Almacenamiento, Fuentes, Gabinetes, Enfriamiento, Periféricos, Redes y Monitores/Software.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@ html_content = f"""<!DOCTYPE html>
                 </div>
                 <div>
                     <span class="text-lg font-black tracking-wider text-white flex items-center gap-1.5 font-heading">
-                        PC CUSTOM LAB <span class="px-1.5 py-0.5 rounded text-[10px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">PRO</span>
+                        VECTEC <span class="px-1.5 py-0.5 rounded text-[10px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">PRO</span>
                     </span>
                     <p class="text-[11px] text-slate-400 font-medium">Armado Profesional & Hardware de Vanguardia</p>
                 </div>
@@ -124,7 +124,7 @@ html_content = f"""<!DOCTYPE html>
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-400">
             <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-cyan-500 text-black flex items-center justify-center font-black">⚡</div>
-                <span class="font-bold text-white">PC CUSTOM LAB © 2026</span> — Armado y Distribución de Hardware
+                <span class="font-bold text-white">VECTEC © 2026</span> — Armado y Distribución de Hardware
             </div>
             <div class="flex gap-6 text-xs text-slate-400">
                 <span>📍 Guadalajara, Jalisco, México</span>

@@ -5,7 +5,7 @@ import urllib.request
 import ssl
 from PIL import Image, ImageChops
 
-BASE_DIR = r"E:\sitios web\pc-custom-lab"
+BASE_DIR = r"E:\sitios web\VECTEC"
 IMG_OUT_DIR = os.path.join(BASE_DIR, "assets", "img")
 COMPACT_JSON = os.path.join(BASE_DIR, "data", "catalogo_maestro_compact.json")
 

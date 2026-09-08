@@ -1,11 +1,11 @@
 // =========================================================================
-// MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (V24 REPARACIÓN TOTAL)
+// MOTOR UNIVERSAL BILINGÜE VECTEC (V24 REPARACIÓN TOTAL)
 // 58 VITRINAS ACTIVAS • COMPATIBILIDAD DUAL (file:/// Y https://) • RESISTENTE A FALLOS
 // =========================================================================
 
 let currentViewStyle = 'grid';
 let currentPageNumber = 1;
-let productsPerPage = 24;
+let productsPerPage = 200;
 let activeSelectedCategory = 'Todas';
 let activeSelectedChip = 'Todos';
 let activeSelectedBrand = 'Todas';
@@ -1070,13 +1070,17 @@ function getPlaceholderForCat(cat) {
 
 window.handleProductImgError = function(imgEl, sku, cat) {
     if (!imgEl) return;
+    const rawSku = String(sku || '').replace(/^[AB]-/, '');
     const step = parseInt(imgEl.getAttribute('data-err-step') || '0', 10);
     const fallbacks = [
-        `https://static.ctonline.mx/imagenes/${sku}/${sku}_full.jpg`,
-        `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`,
-        `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`,
-        `https://d22k14p2jfj20i.cloudfront.net/items/${sku}.jpg`,
-        `https://static.ctonline.mx/img/Thumbs/${sku}_100.jpg`,
+        `assets/img/${rawSku}.webp`,
+        `assets/img/${rawSku}_0.webp`,
+        `assets/img/B-${rawSku}.webp`,
+        `https://static.ctonline.mx/imagenes/${rawSku}/${rawSku}_full.jpg`,
+        `https://static.ctonline.mx/imagenes/${rawSku}/${rawSku}_800.jpg`,
+        `https://static.ctonline.mx/imagenes/${rawSku}/${rawSku}_400.jpg`,
+        `https://d22k14p2jfj20i.cloudfront.net/items/${rawSku}.jpg`,
+        `https://static.ctonline.mx/img/Thumbs/${rawSku}_100.jpg`,
         getPlaceholderForCat(cat)
     ];
 
@@ -1094,7 +1098,9 @@ function renderProductCardHTML(p, viewStyle, isPriority = false) {
     if (!item) return '';
 
     const title = item.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;');
-    const localImg = `assets/img/${item.sku}.webp`;
+    const isClaveB = item.sku.startsWith('B-') || p.prov === 'B' || p.clave_proveedor === 'B';
+    const rawSku = item.sku.replace(/^[AB]-/, '');
+    const localImg = item.img || item.image || (isClaveB ? `assets/img/B-${rawSku}.webp` : `assets/img/${rawSku}.webp`);
     const imgLoadingAttrs = isPriority 
         ? 'fetchpriority="high" decoding="async"' 
         : 'loading="lazy" decoding="async"';
@@ -1108,7 +1114,7 @@ function renderProductCardHTML(p, viewStyle, isPriority = false) {
 
                 <div>
                     <!-- Foto Cuadrada 1080x1080 WebP -->
-                    <div onclick="openProductDetailModal('${item.sku}')" class="w-full aspect-square bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer flex items-center justify-center">
+                    <div onclick="openProductDetailModal('${item.sku}')" class="w-full aspect-square bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2 group-hover:border-cyan-500/40 transition cursor-pointer flex items-center justify-center">
                         <img 
                             src="${localImg}" 
                             alt="${title}" 
@@ -1119,6 +1125,12 @@ function renderProductCardHTML(p, viewStyle, isPriority = false) {
                             onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" 
                         />
                     </div>
+
+                    ${isClaveB ? `
+                        <p class="text-[8.5px] text-amber-300/90 font-mono text-center mb-2 px-1 leading-tight italic">
+                            Imagen de referencia técnica. El empaque o revisión física del producto puede variar según el lote del fabricante.
+                        </p>
+                    ` : ''}
 
                     ${item.subLabel ? `
                         <div class="text-center mb-1">
@@ -1184,8 +1196,15 @@ function renderProductCardHTML(p, viewStyle, isPriority = false) {
     } else {
         return `
             <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
-                <div class="w-24 h-24 sm:w-28 sm:h-28 bg-slate-950 rounded-xl p-2 shrink-0 flex items-center justify-center cursor-pointer" onclick="openProductDetailModal('${item.sku}')">
-                    <img src="${localImg}" alt="${title}" width="120" height="120" ${imgLoadingAttrs} class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
+                <div class="flex flex-col items-center shrink-0">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 bg-slate-950 rounded-xl p-2 shrink-0 flex items-center justify-center cursor-pointer" onclick="openProductDetailModal('${item.sku}')">
+                        <img src="${localImg}" alt="${title}" width="120" height="120" ${imgLoadingAttrs} class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
+                    </div>
+                    ${isClaveB ? `
+                        <span class="text-[7.5px] text-amber-300/90 font-mono text-center mt-1 max-w-[115px] leading-tight italic block">
+                            Imagen de referencia técnica. El empaque o revisión física puede variar.
+                        </span>
+                    ` : ''}
                 </div>
                 <div class="flex-1 min-w-0 text-left">
                     <div class="flex items-center gap-2 mb-1">
@@ -1639,15 +1658,24 @@ function renderPaginationBar(totalPages) {
 
     const current = currentPageNumber;
     const pages = [];
-    const delta = 2;
-    const left = Math.max(2, current - delta);
-    const right = Math.min(totalPages - 1, current + delta);
-
-    pages.push(1);
-    if (left > 2) pages.push('...');
-    for (let i = left; i <= right; i++) pages.push(i);
-    if (right < totalPages - 1) pages.push('...');
-    if (totalPages > 1) pages.push(totalPages);
+    // Paginacion reactiva 10x200: Garantiza acceso directo e instantaneo a paginas 1 a 10
+    if (totalPages <= 10) {
+        for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+        if (current <= 10) {
+            for (let i = 1; i <= 10; i++) pages.push(i);
+            pages.push('...');
+            pages.push(totalPages);
+        } else {
+            pages.push(1);
+            pages.push('...');
+            const left = Math.max(2, current - 2);
+            const right = Math.min(totalPages - 1, current + 2);
+            for (let i = left; i <= right; i++) pages.push(i);
+            if (right < totalPages - 1) pages.push('...');
+            pages.push(totalPages);
+        }
+    }
 
     const html = `
         <div class="w-full flex flex-wrap items-center justify-between gap-3 font-mono text-xs text-white">
@@ -2476,7 +2504,7 @@ function showAddToCartToast(productTitle) {
     } catch(e) {}
 }
 
-// Modal Ficha Técnica (PDP) 100% Nativo PC Custom Lab
+// Modal Ficha Técnica (PDP) 100% Nativo VECTEC
 
 // =========================================================================
 // GALERÍA MULTI-IMAGEN HD (1080x1080) Y SLIDER INTERACTIVO EN MODAL

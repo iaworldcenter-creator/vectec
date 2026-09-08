@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vectec | Vector Tecnológico | Carrito de Compras & Pago Seguro</title>
+    <title>VECTEC | Vector Tecnológico | Carrito de Compras & Pago Seguro</title>
     <meta name="description" content="Proceso de compra seguro para VECTEC. Vector Tecnológico · Sirviendo a la comunidad desde 1954.">
     <!-- WEBMCP AGENTIC MANIFEST (LIGHTHOUSE 13.4+ NAVEGACIÓN AGÉNTICA) -->
     <link rel="alternate" type="text/plain" href="llms.txt" title="WebMCP Agent Manifest" />
@@ -90,7 +90,7 @@
                         <i class="fa-solid fa-house text-amber-400 mr-1.5"></i> Matriz
                     </a>
                     <a href="https://iaworldcenter-creator.github.io/vectec/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-slate-800 transition flex items-center">
-                        <i class="fa-solid fa-microchip text-cyan-400 mr-1.5"></i> Vectec
+                        <i class="fa-solid fa-microchip text-cyan-400 mr-1.5"></i> VECTEC
                     </a>
                     <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition flex items-center">
                         <i class="fa-solid fa-gem text-cyan-300 mr-1.5"></i> Vía MX
@@ -151,123 +151,174 @@
         <!-- ========================================================================= -->
         <!-- SECCIÓN 1: DOMICILIO DE ENTREGA (EXPANDIDO / COLAPSABLE EN 2 LÍNEAS) -->
         <!-- ========================================================================= -->
-        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-4 sm:p-5 shadow-2xl transition-all-custom" id="sec-domicilio-root">
-            
-            <!-- ENCABEZADO DE DOMICILIO -->
-            <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-3">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-7 h-7 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 font-bold text-xs shrink-0">
-                        1
+                <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-4 sm:p-5 shadow-2xl transition-all-custom" id="sec-domicilio-root">
+        
+        <!-- ENCABEZADO DE DOMICILIO -->
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-3">
+            <div class="flex items-center gap-2.5">
+                <div class="w-7 h-7 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 font-bold text-xs shrink-0">
+                    1
+                </div>
+                <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
+                    <span>Domicilio de Entrega & Cotizador Uber Flash</span>
+                </h2>
+            </div>
+
+            <button type="button" id="btn-edit-domicilio" onclick="expandAddressForm()" class="hidden btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-mono font-bold border border-slate-700 transition">
+                <i class="fa-solid fa-pen-to-square mr-1"></i> Modificar Domicilio
+            </button>
+        </div>
+
+        <!-- FORMULARIO DE DOMICILIO COMPLETO -->
+        <div id="form-domicilio-full" class="space-y-3.5 text-xs">
+            <div class="p-3 bg-cyan-950/40 border border-cyan-500/40 rounded-2xl flex items-start gap-2.5 text-cyan-200">
+                <i class="fa-solid fa-truck-ramp-box text-cyan-400 text-base mt-0.5 shrink-0"></i>
+                <div class="leading-relaxed">
+                    <strong class="text-white block font-mono text-[11px] uppercase">Modelo Oficial 100% a Domicilio con Cotizador Dinámico:</strong>
+                    <span>Ingresa tu dirección y código postal para cotizar el flete exacto de Uber Flash en tiempo real desde <strong>Pedro Moreno 501 A</strong>. No contamos con entregas inmediatas en mostrador.</span>
+                </div>
+            </div>
+
+            <!-- PIN DE SEGURIDAD UBER FLASH ACTIVO EN TIEMPO REAL -->
+            <div class="p-3.5 bg-slate-950 border border-emerald-500/50 rounded-2xl flex items-center justify-between shadow-lg">
+                <div>
+                    <span class="text-[10px] font-mono text-emerald-400 font-bold uppercase flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Código PIN de Entrega Segura Uber:
+                    </span>
+                    <div class="flex items-center gap-2 mt-0.5">
+                        <span id="checkout-pin" class="text-2xl font-mono font-black text-white tracking-widest">7453</span>
+                        <span class="text-[9px] font-mono bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded uppercase font-bold">PIN Antirrobo</span>
                     </div>
-                    <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
-                        <span>Domicilio de Entrega & Datos de Contacto</span>
-                    </h2>
+                    <span class="text-[10.5px] text-slate-300 block mt-1">
+                        Entrega este PIN de 4 dígitos exclusivamente al chofer/mensajero de Uber Flash cuando tengas tu paquete en mano.
+                    </span>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl shrink-0 shadow-inner">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label for="custName" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Nombre Completo de quien recibe: *</label>
+                    <input type="text" id="custName" placeholder="Ej. Juan Pérez González" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
+                </div>
+                <div>
+                    <label for="custPhone" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">WhatsApp / Teléfono Móvil: *</label>
+                    <input type="tel" id="custPhone" placeholder="Ej. 33 3727 1440" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[44px]" required />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label for="custEmail" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Correo Electrónico (Confirmación y Factura): *</label>
+                    <input type="email" id="custEmail" placeholder="Ej. juan.perez@email.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
+                </div>
+                <div>
+                    <label for="custCP" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Código Postal (5 dígitos): *</label>
+                    <input type="text" id="custCP" maxlength="5" placeholder="Ej. 44100" oninput="onAddressFieldChange()" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[44px]" required />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label for="custAddress" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Calle y Número Exterior / Interior: *</label>
+                    <input type="text" id="custAddress" placeholder="Ej. Av. Vallarta #1234 Int. 4B" oninput="onAddressFieldChange()" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
+                </div>
+                <div>
+                    <label for="custColonia" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Colonia o Fraccionamiento: *</label>
+                    <input type="text" id="custColonia" placeholder="Ej. Americana / Providencia / Centro" oninput="onAddressFieldChange()" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label for="custCity" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Ciudad / Municipio y Estado: *</label>
+                    <input type="text" id="custCity" placeholder="Ej. Guadalajara, Jalisco" value="Guadalajara, Jalisco" oninput="onAddressFieldChange()" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
+                </div>
+                <div>
+                    <label for="custReferences" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Referencias de Entrega (Entre calles, color fachada): *</label>
+                    <input type="text" id="custReferences" placeholder="Ej. Entre Pedro Moreno y Juárez, portón gris oscuro" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
+                </div>
+            </div>
+
+            <div class="space-y-2 pt-1">
+                <div class="flex items-center justify-between">
+                    <label for="checkoutZoneSelect" class="text-[11px] font-mono text-slate-300 font-bold block">
+                        Modalidad y Tarifa de Entrega a Domicilio:
+                    </label>
+                    <span id="shipping-rate-badge" class="text-xs font-mono font-black text-emerald-400 bg-emerald-950/60 px-2.5 py-0.5 rounded-lg border border-emerald-500/40">
+                        $35.00 MXN
+                    </span>
                 </div>
 
-                <button type="button" id="btn-edit-domicilio" onclick="expandAddressForm()" class="hidden btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-mono font-bold border border-slate-700 transition">
-                    <i class="fa-solid fa-pen-to-square mr-1"></i> Modificar Domicilio
+                <select id="checkoutZoneSelect" onchange="calculateTotals(true)" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-bold cursor-pointer min-h-[44px]">
+                    <optgroup label="🛵 Cotizador Dinámico Uber Flash (Piezas Compactas desde Pedro Moreno 501 A)" id="optgroup-uber">
+                        <option value="35" id="opt-uber-z1">Zona 1 (0-2.5 km Centro): Uber Flash Moto ($35.00 MXN) — Americana / Calzada / Chapultepec</option>
+                        <option value="52" id="opt-uber-z2">Zona 2 (2.5-5.5 km): Uber Flash Moto ($52.00 MXN) — Zapopan / Minerva / Providencia / Tlaquepaque</option>
+                        <option value="75" id="opt-uber-z3">Zona 3 (5.5-12+ km): Uber Flash Moto ($75.00 MXN) — Periférico / Tonalá / Tlajomulco</option>
+                    </optgroup>
+                    <optgroup label="📦 Flete Especializado por Peso / Volumen (Gabinetes, UPS, Monitores, Ensambles)" id="optgroup-heavy">
+                        <option value="heavy_calc" id="opt-heavy-calc">Flete Protegido Especializado (Cálculo según peso volumétrico)</option>
+                    </optgroup>
+                    <optgroup label="🚚 Paquetería Foránea / Nacional (Fuera de ZMG)" id="optgroup-national">
+                        <option value="national" id="opt-national">FedEx / DHL / Estafeta Nacional Asegurado</option>
+                    </optgroup>
+                    <optgroup label="🎉 Promoción Especial (Compras > $3,000 MXN en Piezas Compactas)" id="optgroup-free" class="hidden">
+                        <option value="0" id="opt-free-shipping">¡ENVÍO GRATIS ASEGURADO! (Piezas compactas estándar)</option>
+                    </optgroup>
+                </select>
+
+                <div id="shipping-warning-box" class="p-3.5 bg-slate-900 border border-cyan-500/40 rounded-2xl text-[11px] text-slate-200 leading-relaxed font-mono space-y-2">
+                    <!-- Inyectado dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Checkbox Newsletter -->
+            <div class="pt-1">
+                <label for="custNewsletter" class="flex items-center gap-2.5 text-cyan-300 text-[11px] font-mono font-bold cursor-pointer">
+                    <input type="checkbox" id="custNewsletter" name="newsletter" aria-label="Inscribirme para recibir precios de mayoreo y promociones por correo" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
+                    <span>Inscribirme para recibir promociones exclusivas y novedades por correo</span>
+                </label>
+            </div>
+
+            <!-- Botón de Confirmación para colapsar -->
+            <div class="pt-2 flex justify-end">
+                <button type="button" onclick="saveAndCollapseAddress()" class="btn-action w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition cursor-pointer min-h-[44px]">
+                    <i class="fa-solid fa-circle-check mr-1.5"></i> Confirmar Domicilio de Entrega
                 </button>
             </div>
+        </div>
 
-            <!-- FORMULARIO DE DOMICILIO COMPLETO -->
-            <div id="form-domicilio-full" class="space-y-3.5 text-xs">
-                <p class="text-slate-300 text-xs leading-relaxed">
-                    Ingresa tus datos de entrega y contacto. Se guardarán en tu base de datos para futuras compras y para enviarte promociones mayoristas exclusivas.
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label for="custName" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Nombre Completo de quien recibe: *</label>
-                        <input type="text" id="custName" placeholder="Ej. Juan Pérez González" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
-                    </div>
-                    <div>
-                        <label for="custPhone" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">WhatsApp / Teléfono Móvil: *</label>
-                        <input type="tel" id="custPhone" placeholder="Ej. 33 3727 1440" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[44px]" required />
-                    </div>
+        <!-- VISTA COLAPSADA RESUMEN -->
+        <div id="form-domicilio-collapsed" class="hidden bg-slate-950/90 border border-emerald-500/40 rounded-2xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm shrink-0">
+                    <i class="fa-solid fa-circle-check"></i>
                 </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label for="custEmail" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Correo Electrónico (Para facturas y promociones): *</label>
-                        <input type="email" id="custEmail" placeholder="Ej. juan.perez@email.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
-                    </div>
-                    <div>
-                        <label for="custCP" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Código Postal (Guadalajara / Nacional): *</label>
-                        <input type="text" id="custCP" placeholder="Ej. 44100" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[44px]" required />
-                    </div>
-                </div>
-
                 <div>
-                    <label for="custAddress" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Dirección Completa (Calle, Número ext/int, Colonia, Referencias): *</label>
-                    <input type="text" id="custAddress" placeholder="Ej. Pedro Moreno #501 Int. A, entre 8 de Julio y Pavo, Col. Centro" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium min-h-[44px]" required />
-                </div>
-
-                <div class="space-y-1.5">
-                    <label for="checkoutZoneSelect" class="text-[11px] font-mono text-slate-300 font-bold block">
-                        Modalidad y Zona de Envío:
-                    </label>
-                    <select id="checkoutZoneSelect" onchange="calculateTotals()" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-bold cursor-pointer min-h-[44px]">
-                        <optgroup label="⚡ Envíos Exprés en Moto (Compras < $2,000 MXN)">
-                            <option value="35">Zona 1 (0-2.5 km Centro): Moto Uber Flash ($35.00 MXN)</option>
-                            <option value="52">Zona 2 (2.5-5 km Zapopan/Minerva): Moto Uber Flash ($52.00 MXN)</option>
-                            <option value="75">Zona 3 (5+ km Periférico/Tonalá): Moto Uber Flash ($75.00 MXN)</option>
-                        </optgroup>
-                        <optgroup label="🛡️ Paquetería Blindada / Asegurada (Compras de $2,000 a $2,999 MXN)">
-                            <option value="180" id="opt-paqueteria">Paquetería Asegurada con Firma Obligatoria de Recibido ($180.00 MXN)</option>
-                            <option value="0">Retiro Directo en Mostrador Pedro Moreno 501 A ($0.00 MXN - Gratis)</option>
-                        </optgroup>
-                        <optgroup label="🎁 Envíos Mayores a $3,000 MXN">
-                            <option value="0" id="opt-free-shipping">¡ENVÍO GRATIS ASEGURADO! (Compras > $3,000 MXN)</option>
-                        </optgroup>
-                    </select>
-                    <div id="shipping-warning-box" class="p-3 bg-amber-950/60 border border-amber-500/50 rounded-xl text-[11px] text-amber-200 leading-relaxed font-mono flex items-start gap-2">
-                        <i class="fa-solid fa-triangle-exclamation text-amber-400 mt-0.5 shrink-0"></i>
-                        <span><strong>Regla de Envíos:</strong> Compras &lt; $2,000 MXN aplican para Moto Uber Flash. Compras de $2,000 a $2,999 MXN se envían por Paquetería Asegurada ($180 MXN). <strong>¡Compras superiores a $3,000 MXN cuentan con ENVÍO GRATIS!</strong></span>
+                    <div class="font-bold text-white text-xs sm:text-sm leading-tight">
+                        <span id="col-cust-name">Juan Pérez</span> • <span id="col-cust-contact" class="font-mono text-cyan-300 text-xs">Tel: 33 3727 1440</span>
                     </div>
-                </div>
-
-                <!-- Checkbox Newsletter / Taller Mayorista -->
-                <div class="pt-1">
-                    <label for="custNewsletter" class="flex items-center gap-2.5 text-cyan-300 text-[11px] font-mono font-bold cursor-pointer">
-                        <input type="checkbox" id="custNewsletter" name="newsletter" aria-label="Inscribirme al padrón de talleres y clientes frecuentes para recibir precios de mayoreo y promociones por correo" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
-                        <span>Inscribirme al padrón de talleres y clientes frecuentes para recibir precios de mayoreo y promociones por correo</span>
-                    </label>
-                </div>
-
-                <!-- Botón de Confirmación para colapsar -->
-                <div class="pt-2 flex justify-end">
-                    <button type="button" onclick="saveAndCollapseAddress()" class="btn-action w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition cursor-pointer min-h-[44px]">
-                        <i class="fa-solid fa-circle-check mr-1.5"></i> Confirmar Domicilio de Entrega
-                    </button>
+                    <div class="text-slate-300 text-[11px] mt-0.5 leading-tight">
+                        <span id="col-cust-address">Av. Vallarta #1234, Col. Americana, Guadalajara (CP 44100)</span>
+                    </div>
+                    <div class="text-slate-400 text-[10px] mt-0.5" id="col-cust-refs">
+                        Ref: Entre Pedro Moreno y Juárez
+                    </div>
                 </div>
             </div>
-
-            <!-- VISTA COLAPSADA RESUMEN (2-3 LÍNEAS PEQUEÑAS) -->
-            <div id="form-domicilio-collapsed" class="hidden bg-slate-950/90 border border-emerald-500/40 rounded-2xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm shrink-0">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    <div>
-                        <div class="font-bold text-white text-xs sm:text-sm leading-tight">
-                            <span id="col-cust-name">Juan Pérez</span> • <span id="col-cust-contact" class="font-mono text-cyan-300 text-xs">Tel: 33 3727 1440</span>
-                        </div>
-                        <div class="text-slate-300 text-[11px] mt-0.5 leading-tight">
-                            <span id="col-cust-address">Pedro Moreno #501 Int A, Col. Centro</span> • <span class="text-amber-300 font-mono" id="col-cust-email">juan@email.com</span>
-                        </div>
-                    </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-4">
+                <div class="font-mono text-right">
+                    <span class="text-[9px] text-emerald-400 uppercase font-bold block">PIN Entrega:</span>
+                    <span class="text-base font-black text-white tracking-widest" id="col-checkout-pin">7453</span>
                 </div>
-                <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-4">
-                    <div class="font-mono text-right">
-                        <span class="text-[9px] text-amber-400 uppercase font-bold block">PIN Entrega:</span>
-                        <span class="text-base font-black text-white tracking-widest" id="checkout-pin">7453</span>
-                    </div>
-                    <button type="button" onclick="expandAddressForm()" class="btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] font-mono font-bold border border-slate-700 transition cursor-pointer min-h-[38px]">
-                        <i class="fa-solid fa-pen-to-square mr-1"></i> Modificar
-                    </button>
-                </div>
+                <button type="button" onclick="expandAddressForm()" class="btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] font-mono font-bold border border-slate-700 transition cursor-pointer min-h-[38px]">
+                    <i class="fa-solid fa-pen-to-square mr-1"></i> Modificar
+                </button>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- ========================================================================= -->
         <!-- SECCIÓN 2: FORMA DE PAGO (COLAPSABLE DIRECTAMENTE DEBAJO DEL DOMICILIO) -->
@@ -401,6 +452,10 @@
                     <span>Subtotal Productos:</span>
                     <span id="chk-subtotal" class="text-white font-bold text-sm">$0.00 MXN</span>
                 </div>
+                <div class="flex justify-between items-center text-slate-300">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-key text-emerald-400"></i> PIN Chofer Uber:</span>
+                    <span id="chk-summary-pin" class="text-white font-mono font-black tracking-wider text-sm bg-slate-900 px-2 py-0.5 rounded border border-emerald-500/40">7453</span>
+                </div>
                 <div class="flex justify-between text-slate-300">
                     <span class="flex items-center gap-1"><i class="fa-solid fa-coins text-emerald-400"></i> 5% Cashback Acumulable:</span>
                     <span id="chk-cashback" class="text-emerald-400 font-bold">$0.00 MXN</span>
@@ -421,7 +476,7 @@
                     <i class="fa-solid fa-bag-shopping text-cyan-400"></i> <span>Seguir Comprando</span>
                 </a>
 
-                <button type="button" onclick="executeFinalCheckoutFlow()" class="btn-action w-full sm:flex-1 py-3.5 px-8 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-sm uppercase tracking-wider shadow-2xl flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
+                <button type="button" id="btn-final-submit" onclick="executeFinalCheckoutFlow()" class="btn-action w-full sm:flex-1 py-3.5 px-8 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-sm uppercase tracking-wider shadow-2xl flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
                     <i class="fa-solid fa-lock text-base"></i> <span id="btn-final-label">Proceder al Pago Seguro</span>
                 </button>
             </div>
@@ -443,540 +498,519 @@
                 <span>💬 WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="hover:text-emerald-300 font-bold text-white transition">+52 33 3727 1440</a></span>
             </div>
             <div class="text-slate-400 text-[11px]">
-                © 2026 Vectec. Sirviendo a la comunidad desde 1954.
+                © 2026 VECTEC. Sirviendo a la comunidad desde 1954.
             </div>
         </div>
     </footer>
 
     <!-- LOGICA DEL CHECKOUT, CRM CSV Y CARRITO -->
-    <script>
-        let currentPaymentMethod = 'tarjeta';
-        let isAddressCollapsed = false;
-        let isPaymentCollapsed = false;
+    <!-- SCRIPT OFICIAL DE CHECKOUT DINÁMICO & PERSISTENCIA CRM -->
+  <script src="js/shared-cart-whatsapp.js"></script>
+  <script>
+    let currentPaymentMethod = 'tarjeta';
+    let isAddressCollapsed = false;
+    let isPaymentCollapsed = false;
+    let isManualZoneSelected = false;
 
-        document.addEventListener("DOMContentLoaded", () => {
-            loadCustomerProfile();
-            renderCheckoutProducts();
-            calculateTotals();
+    document.addEventListener("DOMContentLoaded", () => {
+      loadCustomerProfile();
+      if (window.SharedCart && typeof window.SharedCart.syncPin === 'function') {
+        window.SharedCart.syncPin();
+      }
+      renderCheckoutProducts();
+      calculateTotals();
+    });
+
+    // Cargar datos previos de cliente desde localStorage
+    function loadCustomerProfile() {
+      try {
+        const prof = JSON.parse(localStorage.getItem('ecosystem_customer_profile') || '{}');
+        if (prof.nombre && document.getElementById("custName")) document.getElementById("custName").value = prof.nombre;
+        if (prof.telefono && document.getElementById("custPhone")) document.getElementById("custPhone").value = prof.telefono;
+        if (prof.email && document.getElementById("custEmail")) document.getElementById("custEmail").value = prof.email;
+        if (prof.cp && document.getElementById("custCP")) document.getElementById("custCP").value = prof.cp;
+        if (prof.direccion && document.getElementById("custAddress")) document.getElementById("custAddress").value = prof.direccion;
+        if (prof.colonia && document.getElementById("custColonia")) document.getElementById("custColonia").value = prof.colonia;
+        if (prof.ciudad && document.getElementById("custCity")) document.getElementById("custCity").value = prof.ciudad;
+        if (prof.referencias && document.getElementById("custReferences")) document.getElementById("custReferences").value = prof.referencias;
+        
+        if (prof.nombre && prof.telefono && prof.email && prof.direccion && prof.colonia && prof.cp && prof.referencias) {
+          saveAndCollapseAddress(false);
+        }
+      } catch(e) {}
+    }
+
+    // Detección en tiempo real de cambios en el domicilio para cotización dinámica Uber Flash
+    function onAddressFieldChange() {
+      isManualZoneSelected = false;
+      calculateTotals();
+    }
+
+    // Guardar Domicilio y Colapsar a espacio pequeño
+    function saveAndCollapseAddress(showAlert = true) {
+      const name = (document.getElementById("custName").value || '').trim();
+      const phone = (document.getElementById("custPhone").value || '').trim();
+      const email = (document.getElementById("custEmail").value || '').trim();
+      const cp = (document.getElementById("custCP").value || '').trim();
+      const address = (document.getElementById("custAddress").value || '').trim();
+      const colonia = (document.getElementById("custColonia") ? document.getElementById("custColonia").value : '').trim();
+      const city = (document.getElementById("custCity") ? document.getElementById("custCity").value : 'Guadalajara, Jalisco').trim();
+      const references = (document.getElementById("custReferences") ? document.getElementById("custReferences").value : '').trim();
+
+      if (!name || !phone || !email || !address || !colonia || !city || !cp || !references) {
+        if (showAlert) alert("⚠️ Para cumplir con el modelo de entrega 100% a domicilio, es obligatorio proporcionar todos los campos:\n- Nombre de quien recibe\n- WhatsApp / Teléfono\n- Correo Electrónico\n- Calle y Número Exterior/Interior\n- Colonia\n- Código Postal (5 dígitos)\n- Ciudad / Municipio\n- Referencias de entrega");
+        return;
+      }
+
+      const profile = { 
+        nombre: name, 
+        telefono: phone, 
+        email: email, 
+        cp: cp, 
+        direccion: address, 
+        colonia: colonia, 
+        ciudad: city, 
+        referencias: references 
+      };
+      localStorage.setItem('ecosystem_customer_profile', JSON.stringify(profile));
+
+      // Actualizar vista colapsada
+      const colName = document.getElementById("col-cust-name");
+      const colContact = document.getElementById("col-cust-contact");
+      const colAddr = document.getElementById("col-cust-address");
+      const colRefs = document.getElementById("col-cust-refs");
+      if (colName) colName.innerText = name;
+      if (colContact) colContact.innerText = `Tel: ${phone} • ${email}`;
+      if (colAddr) colAddr.innerText = `${address}, Col. ${colonia}, ${city} (CP ${cp})`;
+      if (colRefs) colRefs.innerText = `Ref: ${references}`;
+      
+      const pin = window.SharedCart && typeof window.SharedCart.syncPin === 'function'
+        ? window.SharedCart.syncPin()
+        : (localStorage.getItem('checkout_uber_pin') || '7453');
+
+      document.getElementById("form-domicilio-full").classList.add("hidden");
+      document.getElementById("form-domicilio-collapsed").classList.remove("hidden");
+      document.getElementById("btn-edit-domicilio").classList.remove("hidden");
+      isAddressCollapsed = true;
+    }
+
+    function expandAddressForm() {
+      document.getElementById("form-domicilio-full").classList.remove("hidden");
+      document.getElementById("form-domicilio-collapsed").classList.add("hidden");
+      document.getElementById("btn-edit-domicilio").classList.add("hidden");
+      isAddressCollapsed = false;
+    }
+
+    function selectPaymentMethod(method) {
+      currentPaymentMethod = method;
+      const rCard = document.getElementById("pay_card");
+      const rSpei = document.getElementById("pay_spei");
+      const rOxxo = document.getElementById("pay_oxxo");
+      if (rCard) rCard.checked = (method === 'tarjeta');
+      if (rSpei) rSpei.checked = (method === 'spei');
+      if (rOxxo) rOxxo.checked = (method === 'oxxo');
+
+      const btnLabel = document.getElementById("btn-final-label");
+      if (btnLabel) {
+        if (method === 'tarjeta') btnLabel.innerText = "Pagar con Tarjeta (Mercado Pago)";
+        else if (method === 'spei') btnLabel.innerText = "Confirmar Pago SPEI (WhatsApp)";
+        else btnLabel.innerText = "Generar Ficha de Pago OXXO";
+      }
+    }
+
+    function confirmAndCollapsePayment() {
+      const payTitle = document.getElementById("col-pay-title");
+      const payIcon = document.getElementById("col-pay-icon");
+      
+      if (currentPaymentMethod === 'tarjeta') {
+        if (payTitle) payTitle.innerText = "Tarjeta de Crédito / Débito (Mercado Pago)";
+        if (payIcon) payIcon.className = "fa-solid fa-credit-card text-cyan-400 text-xl shrink-0";
+      } else if (currentPaymentMethod === 'spei') {
+        if (payTitle) payTitle.innerText = "Transferencia SPEI Directa (BBVA México - 0% Comisión)";
+        if (payIcon) payIcon.className = "fa-solid fa-building-columns text-emerald-400 text-xl shrink-0";
+      } else {
+        if (payTitle) payTitle.innerText = "Depósito / Abono en Efectivo (OXXO / 7-Eleven)";
+        if (payIcon) payIcon.className = "fa-solid fa-store text-amber-400 text-xl shrink-0";
+      }
+
+      document.getElementById("form-pago-full").classList.add("hidden");
+      document.getElementById("form-pago-collapsed").classList.remove("hidden");
+      document.getElementById("btn-edit-pago").classList.remove("hidden");
+      isPaymentCollapsed = true;
+    }
+
+    function expandPaymentOptions() {
+      document.getElementById("form-pago-full").classList.remove("hidden");
+      document.getElementById("form-pago-collapsed").classList.add("hidden");
+      document.getElementById("btn-edit-pago").classList.add("hidden");
+      isPaymentCollapsed = false;
+    }
+
+    function copyCLABE() {
+      const clabe = "012180015425843949";
+      navigator.clipboard.writeText(clabe).then(() => {
+        alert("📋 ¡CLABE BBVA copiada al portapapeles!\n012 180 01542584394 9");
+      });
+    }
+
+    function getCartItems() {
+      try {
+        const raw1 = localStorage.getItem('ecosystem_global_cart');
+        const raw2 = localStorage.getItem('cart_items');
+        let items = [];
+        if (raw1) {
+          try { items = JSON.parse(raw1); } catch(e) {}
+        }
+        if ((!items || items.length === 0) && raw2) {
+          try { items = JSON.parse(raw2); } catch(e) {}
+        }
+        if (!Array.isArray(items)) return [];
+        return items.map(item => {
+          const price = parseFloat(item.price || item.precio || 0);
+          const qty = parseInt(item.quantity || item.qty || 1);
+          const stock = item.stock !== undefined ? parseInt(item.stock) : (item.stk !== undefined ? parseInt(item.stk) : 1);
+          const isDisp = item.disponible !== false && item.d !== 0 && item.estado_comercial !== 'bajo_pedido' && item.est_com !== 'bajo_pedido' && stock > 0;
+          return {
+            sku: item.sku || item.id || 'ITEM-GEN',
+            name: item.name || item.nombre || item.title || 'Producto del Catálogo',
+            price: price,
+            precio: price,
+            quantity: qty > 0 ? qty : 1,
+            qty: qty > 0 ? qty : 1,
+            image: item.image || item.imagen || 'assets/img/hero_pc_cyberpunk.webp',
+            stock: stock,
+            stk: stock,
+            disponible: isDisp,
+            estado_comercial: isDisp ? 'disponible' : 'bajo_pedido'
+          };
         });
+      } catch(e) {
+        return [];
+      }
+    }
 
-        // Cargar datos previos de cliente desde localStorage
-        function loadCustomerProfile() {
-            try {
-                const prof = JSON.parse(localStorage.getItem('ecosystem_customer_profile') || '{}');
-                if (prof.nombre) document.getElementById("custName").value = prof.nombre;
-                if (prof.telefono) document.getElementById("custPhone").value = prof.telefono;
-                if (prof.email) document.getElementById("custEmail").value = prof.email;
-                if (prof.cp) document.getElementById("custCP").value = prof.cp;
-                if (prof.direccion) document.getElementById("custAddress").value = prof.direccion;
-                if (typeof prof.newsletter === 'boolean') {
-                    const chk = document.getElementById("custNewsletter");
-                    if (chk) chk.checked = prof.newsletter;
-                }
-                
-                // Si ya tiene datos completos, colapsar automáticamente
-                if (prof.nombre && prof.telefono && prof.email && prof.direccion) {
-                    saveAndCollapseAddress(false);
-                }
-            } catch(e) {}
+    function saveCartItems(items) {
+      try {
+        localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
+        localStorage.setItem('cart_items', JSON.stringify(items));
+        window.dispatchEvent(new Event('storage'));
+      } catch(e) {}
+    }
+
+    function renderCheckoutProducts() {
+      const container = document.getElementById("checkout-items-list");
+      if (!container) return;
+
+      const items = getCartItems();
+      const countEl = document.getElementById("chk-item-count");
+      if (countEl) countEl.innerText = `${items.length} artículo${items.length === 1 ? '' : 's'}`;
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 space-y-3 bg-slate-950/60 rounded-2xl border border-slate-800 p-6">
+            <i class="fa-solid fa-cart-arrow-down text-3xl text-slate-600"></i>
+            <p class="text-slate-400 font-mono text-xs">Tu carrito se encuentra vacío actualmente.</p>
+            <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono font-bold text-xs transition">
+              <i class="fa-solid fa-store"></i> Explorar Catálogo
+            </a>
+          </div>
+        `;
+        calculateTotals();
+        return;
+      }
+
+      container.innerHTML = items.map(item => {
+        const sku = item.sku;
+        const name = item.name;
+        const unitPrice = item.price;
+        const qty = item.quantity;
+        const subtotal = unitPrice * qty;
+        const img = item.image || 'assets/img/hero_pc_cyberpunk.webp';
+        const isBackordered = item.stock === 0 || item.stk === 0 || item.disponible === false || item.estado_comercial === 'bajo_pedido';
+
+        return `
+          <div class="p-3.5 bg-slate-950/80 border ${isBackordered ? 'border-amber-500/60 bg-amber-950/20' : 'border-slate-800 hover:border-slate-700'} rounded-2xl flex flex-col sm:flex-row items-center gap-3.5 transition group" id="chk-row-${sku}">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-slate-900 border border-slate-800 p-1 flex items-center justify-center shrink-0 overflow-hidden">
+              <img src="${img}" alt="${name}" class="w-full h-full object-contain group-hover:scale-105 transition" onerror="this.src='https://iaworldcenter-creator.github.io/VECTEC/assets/img/hero_pc_cyberpunk.webp';" />
+            </div>
+
+            <div class="flex-1 text-center sm:text-left space-y-1 w-full sm:w-auto">
+              <div class="font-bold text-white text-xs sm:text-sm line-clamp-2 leading-snug">
+                ${name}
+              </div>
+              <div class="flex items-center justify-center sm:justify-start gap-2 text-[10px] font-mono text-slate-400 flex-wrap">
+                <span class="bg-slate-900 px-2 py-0.5 rounded border border-slate-800">SKU: ${sku}</span>
+                ${isBackordered ? `
+                  <span class="bg-amber-950/90 text-amber-300 border border-amber-500/60 px-2 py-0.5 rounded font-bold text-[9.5px]">
+                    ⏳ BAJO PEDIDO (STOCK CERO)
+                  </span>
+                ` : `
+                  <span class="bg-emerald-950/90 text-emerald-300 border border-emerald-500/60 px-2 py-0.5 rounded font-bold text-[9.5px]">
+                    ✓ EN STOCK
+                  </span>
+                `}
+              </div>
+              <div class="text-xs font-mono font-black text-emerald-300">
+                Precio Unitario: $${unitPrice.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+              </div>
+              ${isBackordered ? `
+                <div class="text-[10px] text-amber-300/90 font-mono">
+                  * Este artículo requiere pedido especial y no puede liquidarse para entrega exprés inmediata.
+                </div>
+              ` : ''}
+            </div>
+
+            <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2.5 shrink-0">
+              <div class="text-right font-mono">
+                <span class="text-[10px] text-slate-400 block sm:inline">Subtotal:</span>
+                <div class="text-sm sm:text-base font-black text-white">$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
+              </div>
+
+              <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-700 rounded-xl p-1 shadow">
+                <button type="button" onclick="updateItemQuantity('${sku}', -1)" aria-label="Disminuir cantidad" class="qty-btn w-8 h-8 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer min-h-[36px] min-w-[36px]">
+                  <i class="fa-solid fa-minus text-xs"></i>
+                </button>
+                <span class="w-7 text-center text-white font-mono font-bold text-xs">${qty}</span>
+                <button type="button" onclick="updateItemQuantity('${sku}', 1)" aria-label="Aumentar cantidad" class="qty-btn w-8 h-8 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer min-h-[36px] min-w-[36px]">
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+                <button type="button" onclick="deleteItemFromCart('${sku}')" aria-label="Eliminar producto" class="btn-action w-8 h-8 rounded-lg bg-red-950/40 hover:bg-red-900 text-red-400 hover:text-white flex items-center justify-center transition ml-1 cursor-pointer min-h-[36px] min-w-[36px]" title="Eliminar del Carrito">
+                  <i class="fa-solid fa-trash-can text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // GESTIÓN DE CANDADO DE CHECKOUT ANTE STOCK CERO
+      const backorderedItems = items.filter(i => i.stock === 0 || i.stk === 0 || i.disponible === false || i.estado_comercial === 'bajo_pedido');
+      const checkoutBtn = document.getElementById("btn-final-submit") || document.querySelector("button[onclick='executeFinalCheckoutFlow()']");
+      let lockBanner = document.getElementById("checkout-stock-lock-banner");
+
+      if (backorderedItems.length > 0) {
+        const backorderedNames = backorderedItems.map(i => `• [${i.sku}] ${i.name}`).join('\n');
+        const waText = `Hola VECTEC, deseo consultar y tramitar el pedido especial de los siguientes artículos sin stock inmediato:\n${backorderedNames}`;
+        
+        if (!lockBanner && checkoutBtn && checkoutBtn.parentNode) {
+          lockBanner = document.createElement("div");
+          lockBanner.id = "checkout-stock-lock-banner";
+          checkoutBtn.parentNode.parentNode.insertBefore(lockBanner, checkoutBtn.parentNode);
+        }
+        
+        if (lockBanner) {
+          lockBanner.className = "p-4 rounded-2xl bg-amber-950/80 border-2 border-amber-500 text-amber-200 text-xs font-mono space-y-2.5 mb-3 shadow-2xl";
+          lockBanner.innerHTML = `
+            <div class="flex items-center gap-2 font-bold text-amber-300 text-sm">
+              <i class="fa-solid fa-triangle-exclamation text-base"></i>
+              <span>Artículos Bajo Pedido Detectados en tu Canasta (${backorderedItems.length})</span>
+            </div>
+            <p class="leading-relaxed">
+              Tu canasta contiene artículos bajo pedido (sin stock inmediato). Por favor retíralos para continuar con la compra directa a domicilio, o comunícate con nuestro mostrador vía WhatsApp para programar su pedido especial:
+            </p>
+            <div class="bg-slate-950/80 p-2.5 rounded-xl border border-amber-500/30 font-mono text-[11px] text-amber-200">
+              ${backorderedItems.map(i => `<div>• <strong class="text-amber-300">[${i.sku}]</strong> ${escapeHtml(i.name)}</div>`).join('')}
+            </div>
+            <div class="pt-1">
+              <a href="https://wa.me/523337271440?text=${encodeURIComponent(waText)}" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 text-white font-bold text-xs shadow-lg transition">
+                <i class="fa-brands fa-whatsapp text-base"></i> Coordinar Pedido Especial de estos Artículos por WhatsApp (+52 33 3727 1440)
+              </a>
+            </div>
+          `;
         }
 
-        // Guardar Domicilio, Guardar en CRM Local y Colapsar a 2 líneas
-        function saveAndCollapseAddress(showAlert = true) {
-            const name = (document.getElementById("custName").value || '').trim();
-            const phone = (document.getElementById("custPhone").value || '').trim();
-            const email = (document.getElementById("custEmail").value || '').trim();
-            const cp = (document.getElementById("custCP").value || '').trim();
-            const address = (document.getElementById("custAddress").value || '').trim();
-            const newsletter = document.getElementById("custNewsletter") ? document.getElementById("custNewsletter").checked : true;
-
-            if (!name || !phone || !email || !address) {
-                if (showAlert) alert("⚠️ Por favor completa todos los campos del domicilio de entrega.");
-                return;
-            }
-
-            const profile = { nombre: name, telefono: phone, email: email, cp: cp, direccion: address, newsletter: newsletter };
-            localStorage.setItem('ecosystem_customer_profile', JSON.stringify(profile));
-
-            // Guardar o actualizar en el CRM Local
-            saveCustomerToCRM(profile);
-
-            // Actualizar vista colapsada
-            const colName = document.getElementById("col-cust-name");
-            const colContact = document.getElementById("col-cust-contact");
-            const colAddr = document.getElementById("col-cust-address");
-            const colEmail = document.getElementById("col-cust-email");
-            if (colName) colName.innerText = name;
-            if (colContact) colContact.innerText = `Tel: ${phone}`;
-            if (colAddr) colAddr.innerText = `${address} (CP ${cp || '44100'})`;
-            if (colEmail) colEmail.innerText = email;
-            
-            // Generar PIN de 4 dígitos si no existe
-            let pin = localStorage.getItem('checkout_uber_pin');
-            if (!pin) {
-                pin = Math.floor(1000 + Math.random() * 9000);
-                localStorage.setItem('checkout_uber_pin', pin);
-            }
-            const pinEl = document.getElementById("checkout-pin");
-            if (pinEl) pinEl.innerText = pin;
-
-            document.getElementById("form-domicilio-full").classList.add("hidden");
-            document.getElementById("form-domicilio-collapsed").classList.remove("hidden");
-            document.getElementById("btn-edit-domicilio").classList.remove("hidden");
-            isAddressCollapsed = true;
+        if (checkoutBtn) {
+          checkoutBtn.disabled = true;
+          checkoutBtn.classList.add("opacity-50", "cursor-not-allowed", "pointer-events-none", "grayscale");
+          const lbl = document.getElementById("btn-final-label");
+          if (lbl) lbl.innerText = "Compra Directa Bloqueada (Artículos Bajo Pedido)";
         }
-
-        function expandAddressForm() {
-            document.getElementById("form-domicilio-full").classList.remove("hidden");
-            document.getElementById("form-domicilio-collapsed").classList.add("hidden");
-            document.getElementById("btn-edit-domicilio").classList.add("hidden");
-            isAddressCollapsed = false;
+      } else {
+        if (lockBanner) lockBanner.remove();
+        if (checkoutBtn) {
+          checkoutBtn.disabled = false;
+          checkoutBtn.classList.remove("opacity-50", "cursor-not-allowed", "pointer-events-none", "grayscale");
+          if (typeof selectPaymentMethod === 'function') selectPaymentMethod(currentPaymentMethod);
         }
+      }
+    }
 
-        // Selección de forma de pago
-        function selectPaymentMethod(method) {
-            currentPaymentMethod = method;
-            const rCard = document.getElementById("pay_card");
-            const rSpei = document.getElementById("pay_spei");
-            const rOxxo = document.getElementById("pay_oxxo");
-            if (rCard) rCard.checked = (method === 'tarjeta');
-            if (rSpei) rSpei.checked = (method === 'spei');
-            if (rOxxo) rOxxo.checked = (method === 'oxxo');
+    function updateItemQuantity(sku, delta) {
+      let items = getCartItems();
+      const item = items.find(i => i.sku === sku);
+      if (item) {
+        let q = parseInt(item.quantity || 1) + delta;
+        if (q < 1) q = 1;
+        item.quantity = q;
+        item.qty = q;
+        saveCartItems(items);
+        renderCheckoutProducts();
+        calculateTotals();
+      }
+    }
 
-            const btnLabel = document.getElementById("btn-final-label");
-            if (btnLabel) {
-                if (method === 'tarjeta') btnLabel.innerText = "Pagar con Tarjeta (Mercado Pago)";
-                else if (method === 'spei') btnLabel.innerText = "Confirmar Pago SPEI (WhatsApp)";
-                else btnLabel.innerText = "Generar Ficha de Pago OXXO";
-            }
-        }
+    function deleteItemFromCart(sku) {
+      let items = getCartItems();
+      items = items.filter(i => i.sku !== sku);
+      saveCartItems(items);
+      renderCheckoutProducts();
+      calculateTotals();
+    }
 
-        function confirmAndCollapsePayment() {
-            const payTitle = document.getElementById("col-pay-title");
-            const payIcon = document.getElementById("col-pay-icon");
-            
-            if (currentPaymentMethod === 'tarjeta') {
-                if (payTitle) payTitle.innerText = "Tarjeta de Crédito / Débito (Mercado Pago)";
-                if (payIcon) payIcon.className = "fa-solid fa-credit-card";
-            } else if (currentPaymentMethod === 'spei') {
-                if (payTitle) payTitle.innerText = "Transferencia SPEI Directa (BBVA México - 0% Comisión)";
-                if (payIcon) payIcon.className = "fa-solid fa-building-columns";
+    // =========================================================================
+    // CÁLCULO DINÁMICO RESTAURADO CON UBER FLASH, PIN Y SIN ENVÍO GRATIS CIEGO
+    // =========================================================================
+    function calculateTotals(isManualChange = false) {
+      const items = getCartItems();
+      const street = (document.getElementById("custAddress") ? document.getElementById("custAddress").value : '').trim();
+      const colonia = (document.getElementById("custColonia") ? document.getElementById("custColonia").value : '').trim();
+      const cp = (document.getElementById("custCP") ? document.getElementById("custCP").value : '').trim();
+      const city = (document.getElementById("custCity") ? document.getElementById("custCity").value : 'Guadalajara, Jalisco').trim();
+
+      const zoneSelect = document.getElementById("checkoutZoneSelect");
+      const rateBadge = document.getElementById("shipping-rate-badge");
+      const warnBox = document.getElementById("shipping-warning-box");
+
+      const optUberGroup = document.getElementById("optgroup-uber");
+      const optHeavyGroup = document.getElementById("optgroup-heavy");
+      const optFreeGroup = document.getElementById("optgroup-free");
+      const optFree = document.getElementById("opt-free-shipping");
+
+      // Usar cálculo avanzado de SharedCart
+      const calc = window.SharedCart && typeof window.SharedCart.calculateShippingDetails === 'function'
+        ? window.SharedCart.calculateShippingDetails(items, { street, colonia, cp, city })
+        : {
+            cost: 35,
+            subtotal: 0,
+            total: 0,
+            carrier: "Uber Flash Moto",
+            label: "Tarifa Base",
+            isHeavy: false,
+            isFreeShipping: false,
+            noticeHtml: "Calculando flete..."
+          };
+
+      let finalShipping = calc.cost;
+
+      // Actualizar UI del selector
+      if (calc.isHeavy) {
+        // Si hay productos pesados, deshabilitar moto Uber
+        if (optUberGroup) optUberGroup.disabled = true;
+        if (optFreeGroup) optFreeGroup.classList.add("hidden");
+        if (zoneSelect) zoneSelect.value = "heavy_calc";
+      } else {
+        if (optUberGroup) optUberGroup.disabled = false;
+        
+        if (calc.isFreeShipping) {
+          if (optFreeGroup) optFreeGroup.classList.remove("hidden");
+          if (zoneSelect) zoneSelect.value = "0";
+        } else {
+          if (optFreeGroup) optFreeGroup.classList.add("hidden");
+          if (!isManualChange && zoneSelect) {
+            if (!calc.uberEstimate.isLocalZMG) {
+              zoneSelect.value = "national";
             } else {
-                if (payTitle) payTitle.innerText = "Depósito / Abono en Efectivo (OXXO / 7-Eleven)";
-                if (payIcon) payIcon.className = "fa-solid fa-store";
+              zoneSelect.value = String(calc.uberEstimate.fee || 35);
             }
-
-            document.getElementById("form-pago-full").classList.add("hidden");
-            document.getElementById("form-pago-collapsed").classList.remove("hidden");
-            document.getElementById("btn-edit-pago").classList.remove("hidden");
-            isPaymentCollapsed = true;
+          }
         }
+      }
 
-        function expandPaymentOptions() {
-            document.getElementById("form-pago-full").classList.remove("hidden");
-            document.getElementById("form-pago-collapsed").classList.add("hidden");
-            document.getElementById("btn-edit-pago").classList.add("hidden");
-            isPaymentCollapsed = false;
+      // Si el usuario manipuló el select manualmente (y no es pesado)
+      if (isManualChange && !calc.isHeavy && zoneSelect) {
+        const manualVal = parseFloat(zoneSelect.value);
+        if (!isNaN(manualVal)) {
+          finalShipping = manualVal;
         }
+      }
 
-        function copyCLABE() {
-            const clabe = "012180015425843949";
-            navigator.clipboard.writeText(clabe).then(() => {
-                alert("📋 ¡CLABE BBVA copiada al portapapeles!\n012 180 01542584394 9");
-            });
-        }
+      const total = calc.subtotal === 0 ? 0 : (calc.subtotal + finalShipping);
 
-        // =========================================================================
-        // CRM LOCAL Y EXPORTADOR CSV PARA CLIENTES Y NEWSLETTER
-        // =========================================================================
-        function saveCustomerToCRM(profile) {
-            try {
-                let crm = JSON.parse(localStorage.getItem('ecosystem_crm_clients') || '[]');
-                const pin = localStorage.getItem('checkout_uber_pin') || '7453';
-                const now = new Date().toISOString().slice(0, 10);
-                
-                const existingIdx = crm.findIndex(c => c.email === profile.email || c.phone === profile.telefono);
-                if (existingIdx >= 0) {
-                    crm[existingIdx].name = profile.nombre;
-                    crm[existingIdx].phone = profile.telefono;
-                    crm[existingIdx].email = profile.email;
-                    crm[existingIdx].cp = profile.cp;
-                    crm[existingIdx].address = profile.direccion;
-                    crm[existingIdx].newsletter = profile.newsletter;
-                    crm[existingIdx].pin = pin;
-                    crm[existingIdx].lastUpdated = now;
-                } else {
-                    crm.push({
-                        id: `CLI-${Date.now().toString().slice(-6)}`,
-                        registered: now,
-                        name: profile.nombre,
-                        phone: profile.telefono,
-                        email: profile.email,
-                        cp: profile.cp,
-                        address: profile.direccion,
-                        totalSpent: 0,
-                        isTaller: true,
-                        newsletter: profile.newsletter,
-                        pin: pin,
-                        lastUpdated: now
-                    });
-                }
-                localStorage.setItem('ecosystem_crm_clients', JSON.stringify(crm));
-            } catch(e) {}
-        }
+      // Actualizar Badges y Warning Box
+      if (rateBadge) {
+        if (calc.subtotal === 0) rateBadge.innerText = "$0.00 MXN";
+        else if (finalShipping === 0) rateBadge.innerText = "¡GRATIS!";
+        else rateBadge.innerText = `$${finalShipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+      }
 
-        function exportClientsCSV() {
-            let crm = [];
-            try {
-                crm = JSON.parse(localStorage.getItem('ecosystem_crm_clients') || '[]');
-            } catch(e) {}
+      if (warnBox) {
+        warnBox.innerHTML = calc.noticeHtml;
+      }
 
-            // Si está vacío, incluir el perfil actual o ejemplo
-            if (crm.length === 0) {
-                const cur = JSON.parse(localStorage.getItem('ecosystem_customer_profile') || '{}');
-                if (cur.nombre) {
-                    crm.push({
-                        id: "CLI-1001",
-                        registered: new Date().toISOString().slice(0, 10),
-                        name: cur.nombre,
-                        phone: cur.telefono,
-                        email: cur.email,
-                        cp: cur.cp,
-                        address: cur.direccion,
-                        totalSpent: 0,
-                        isTaller: true,
-                        newsletter: cur.newsletter !== false,
-                        pin: localStorage.getItem('checkout_uber_pin') || "7453"
-                    });
-                }
-            }
+      // Asegurar sincronización del PIN
+      const pin = window.SharedCart && typeof window.SharedCart.syncPin === 'function'
+        ? window.SharedCart.syncPin()
+        : '7453';
 
-            if (crm.length === 0) {
-                alert("ℹ️ Aún no hay clientes registrados en la base de datos local.");
-                return;
-            }
+      const elSub = document.getElementById("chk-subtotal");
+      const elCash = document.getElementById("chk-cashback");
+      const elShip = document.getElementById("chk-shipping");
+      const elTot = document.getElementById("chk-total");
+      const elPinSummary = document.getElementById("chk-summary-pin");
 
-            let csvContent = "\uFEFFID_Cliente,Fecha_Registro,Nombre_Completo,WhatsApp_Telefono,Correo_Electronico,Codigo_Postal,Direccion_Completa,Total_Compras_MXN,Es_Taller_Mayorista,Newsletter_Activo,PIN_Entrega\n";
-            
-            crm.forEach(c => {
-                const row = [
-                    `"${c.id || 'CLI-001'}"`,
-                    `"${c.registered || ''}"`,
-                    `"${(c.name || '').replace(/"/g, '""')}"`,
-                    `"${c.phone || ''}"`,
-                    `"${c.email || ''}"`,
-                    `"${c.cp || ''}"`,
-                    `"${(c.address || '').replace(/"/g, '""')}"`,
-                    `"${c.totalSpent || 0}"`,
-                    `"${c.isTaller ? 'SI' : 'NO'}"`,
-                    `"${c.newsletter ? 'SI' : 'NO'}"`,
-                    `"${c.pin || ''}"`
-                ];
-                csvContent += row.join(",") + "\n";
-            });
+      const cashback = calc.subtotal * 0.05;
 
-            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = `clientes_pc_custom_lab_${new Date().toISOString().slice(0,10)}.csv`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
+      if (elSub) elSub.innerText = `$${calc.subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+      if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+      
+      if (elShip) {
+        if (calc.subtotal === 0) elShip.innerText = "$0.00 MXN";
+        else if (finalShipping === 0) elShip.innerText = "¡GRATIS! (Piezas Compactas)";
+        else elShip.innerText = `$${finalShipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+      }
+      
+      if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+      if (elPinSummary) elPinSummary.innerText = pin;
+    }
 
-        // =========================================================================
-        // RECUPERACIÓN Y RENDERIZADO DEL CARRITO CON FOTO GRANDE Y CONTROLES (+ / - / 🗑️)
-        // =========================================================================
+    // =========================================================================
+    // CIERRE DE VENTAS CON PIN Y DOBLE NOTIFICACIÓN (VECTEC)
+    // =========================================================================
+    function executeFinalCheckoutFlow() {
+      const items = getCartItems();
+      if (items.length === 0) {
+        alert("⚠️ Tu carrito está vacío. Agrega productos antes de realizar tu pedido.");
+        return;
+      }
 
-        function getCartItems() {
-            try {
-                const raw1 = localStorage.getItem('ecosystem_global_cart');
-                const raw2 = localStorage.getItem('cart_items');
-                let items = [];
-                if (raw1) {
-                    try { items = JSON.parse(raw1); } catch(e) {}
-                }
-                if ((!items || items.length === 0) && raw2) {
-                    try { items = JSON.parse(raw2); } catch(e) {}
-                }
-                if (!Array.isArray(items)) return [];
-                return items.map(item => {
-                    const price = parseFloat(item.price || item.precio || 0);
-                    const qty = parseInt(item.quantity || item.qty || 1);
-                    return {
-                        sku: item.sku || item.id || 'ITEM-GEN',
-                        name: item.name || item.nombre || item.title || 'Producto del Catálogo',
-                        price: price,
-                        precio: price,
-                        quantity: qty > 0 ? qty : 1,
-                        qty: qty > 0 ? qty : 1,
-                        image: item.image || item.imagen || item.img || './assets/img/placeholders/acc_placeholder.jpg',
-                        cdn_url: item.cdn_url || (item.sku ? `https://static.ctonline.mx/imagenes/${item.sku}/${item.sku}_800.jpg` : ''),
-                        store: item.store || 'pc-custom-lab',
-                        storeName: item.storeName || 'Vectec'
-                    };
-                });
-            } catch(e) { return []; }
-        }
+      // CANDADO DE SEGURIDAD: Artículos con stock cero / bajo pedido
+      const backordered = items.filter(i => i.stock === 0 || i.stk === 0 || i.disponible === false || i.estado_comercial === 'bajo_pedido');
+      if (backordered.length > 0) {
+        const backorderedNames = backordered.map(i => `• [${i.sku}] ${i.name}`).join('\n');
+        alert(`⚠️ ACCIÓN BLOQUEADA: Tu canasta contiene artículos bajo pedido (sin stock inmediato):\n\n${backorderedNames}\n\nPor favor retíralos para continuar con la compra directa a domicilio, o comunícate con mostrador vía WhatsApp (+52 33 3727 1440) para programar su pedido especial.`);
+        return;
+      }
 
-        function saveCartItems(items) {
-            localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
-            localStorage.setItem('cart_items', JSON.stringify(items));
-        }
+      const name = (document.getElementById("custName").value || '').trim();
+      const phone = (document.getElementById("custPhone").value || '').trim();
+      const email = (document.getElementById("custEmail").value || '').trim();
+      const address = (document.getElementById("custAddress").value || '').trim();
+      const colonia = (document.getElementById("custColonia") ? document.getElementById("custColonia").value : '').trim();
+      const city = (document.getElementById("custCity") ? document.getElementById("custCity").value : 'Guadalajara, Jalisco').trim();
+      const cp = (document.getElementById("custCP").value || '').trim();
+      const references = (document.getElementById("custReferences") ? document.getElementById("custReferences").value : '').trim();
 
-        function renderCheckoutProducts() {
-            const list = document.getElementById("checkout-items-list");
-            const badge = document.getElementById("items-count-badge");
-            if (!list) return;
+      if (!name || !phone || !email || !address || !colonia || !city || !cp || !references) {
+        alert("⚠️ Para cumplir con el modelo de entrega 100% a domicilio, es obligatorio completar todos los campos:\n- Nombre de quien recibe\n- WhatsApp / Teléfono\n- Correo Electrónico\n- Dirección (Calle y Número)\n- Colonia\n- Código Postal (5 dígitos)\n- Ciudad\n- Referencias de entrega");
+        expandAddressForm();
+        return;
+      }
 
-            const items = getCartItems();
-            const totalUnits = items.reduce((s, i) => s + (parseInt(i.quantity) || 1), 0);
-            if (badge) badge.innerText = `${totalUnits} ${totalUnits === 1 ? 'producto' : 'productos'}`;
-
-            if (items.length === 0) {
-                list.innerHTML = `
-                    <div class="py-12 text-center text-slate-400 font-mono text-sm space-y-3">
-                        <i class="fa-solid fa-cart-shopping text-4xl text-cyan-400 block mb-2"></i>
-                        <p class="text-base text-white font-bold">Tu carrito de compras está vacío.</p>
-                        <p class="text-xs text-slate-400">Selecciona componentes o productos en el catálogo para comenzar tu ensamble.</p>
-                        <div class="pt-2">
-                            <a href="index.html" class="btn-action inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition">
-                                <i class="fa-solid fa-layer-group"></i> Explorar Catálogo
-                            </a>
-                        </div>
-                    </div>
-                `;
-                return;
-            }
-
-            list.innerHTML = items.map((p, idx) => {
-                const sku = p.sku || `ITEM-${idx}`;
-                const title = p.name || 'Producto del Catálogo';
-                const price = parseFloat(p.price || 0);
-                const qty = parseInt(p.quantity || 1);
-                
-                // Descuento por mayoreo solo si son 10 o más piezas del MISMO producto
-                const hasWholesale = qty >= 10;
-                const unitPrice = hasWholesale ? (price * 0.93) : price;
-                const subtotal = unitPrice * qty;
-                
-                const localImg = p.image || './assets/img/placeholders/acc_placeholder.jpg';
-                const cdnImg = p.cdn_url || `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
-                const placeholder = './assets/img/placeholders/acc_placeholder.jpg';
-
-                return `
-                    <div class="pt-3.5 pb-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800/80">
-                        <!-- FOTO GRANDE DEL PRODUCTO -->
-                        <div class="product-img-box shrink-0 bg-slate-950 border border-slate-800 rounded-2xl p-2 flex items-center justify-center">
-                            <img 
-                                src="${localImg}" 
-                                alt="${title}" 
-                                width="120" 
-                                height="120" 
-                                loading="lazy" 
-                                class="w-full h-full object-contain"
-                                onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }"
-                            />
-                        </div>
-
-                        <!-- DESCRIPCIÓN AMPLIA Y CARACTERÍSTICAS -->
-                        <div class="flex-1 min-w-0">
-                            <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-0.5">
-                                <i class="fa-solid fa-microchip mr-1"></i> ${p.storeName || 'Vectec'}
-                            </span>
-                            <h3 class="text-xs sm:text-sm font-bold text-white leading-snug mb-1">${title}</h3>
-                            <div class="flex flex-wrap items-center gap-2 text-[10.5px] font-mono text-slate-300 mb-1">
-                                <span>SKU: <strong class="text-cyan-300 font-bold">${sku}</strong></span>
-                                <span>•</span>
-                                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-shield-check"></i> Garantía 48h / 1 Año</span>
-                                ${hasWholesale ? '<span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[9px] px-1.5 py-0.5 rounded font-black uppercase">Mayoreo Especial (10+ pzs)</span>' : ''}
-                            </div>
-                            <div class="text-xs font-mono font-black text-emerald-300">
-                                Precio Unitario: $${unitPrice.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
-                            </div>
-                        </div>
-
-                        <!-- CONTROLES (+ / - / 🗑️) Y SUBTOTAL -->
-                        <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2.5 shrink-0">
-                            <div class="text-right font-mono">
-                                <span class="text-[10px] text-slate-400 block sm:inline">Subtotal:</span>
-                                <div class="text-sm sm:text-base font-black text-white">$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
-                            </div>
-
-                            <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-700 rounded-xl p-1 shadow">
-                                <button type="button" onclick="updateItemQuantity('${sku}', -1)" aria-label="Disminuir cantidad" class="qty-btn w-8 h-8 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer min-h-[36px] min-w-[36px]">
-                                    <i class="fa-solid fa-minus text-xs"></i>
-                                </button>
-                                <span class="w-7 text-center text-white font-mono font-bold text-xs">${qty}</span>
-                                <button type="button" onclick="updateItemQuantity('${sku}', 1)" aria-label="Aumentar cantidad" class="qty-btn w-8 h-8 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer min-h-[36px] min-w-[36px]">
-                                    <i class="fa-solid fa-plus text-xs"></i>
-                                </button>
-                                <button type="button" onclick="deleteItemFromCart('${sku}')" aria-label="Eliminar producto" class="btn-action w-8 h-8 rounded-lg bg-red-950/40 hover:bg-red-900 text-red-400 hover:text-white flex items-center justify-center transition ml-1 cursor-pointer min-h-[36px] min-w-[36px]" title="Eliminar del Carrito">
-                                    <i class="fa-solid fa-trash-can text-xs"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function updateItemQuantity(sku, delta) {
-            let items = getCartItems();
-            const item = items.find(i => i.sku === sku);
-            if (item) {
-                let q = parseInt(item.quantity || 1) + delta;
-                if (q < 1) q = 1;
-                item.quantity = q;
-                item.qty = q;
-                saveCartItems(items);
-                renderCheckoutProducts();
-                calculateTotals();
-            }
-        }
-
-        function deleteItemFromCart(sku) {
-            let items = getCartItems();
-            items = items.filter(i => i.sku !== sku);
-            saveCartItems(items);
-            renderCheckoutProducts();
-            calculateTotals();
-        }
-
-        // =========================================================================
-        // REGLAS DE ENVÍO EXACTAS:
-        // • Compras < $2,000 MXN: Moto Uber Flash ($35 / $52 / $75)
-        // • Compras $2,000 a $2,999 MXN: Paquetería Asegurada ($180 MXN)
-        // • Compras >= $3,000 MXN: ¡ENVÍO GRATIS ASEGURADO ($0.00 MXN)!
-        // =========================================================================
-        function calculateTotals() {
-            const items = getCartItems();
-            
-            let subtotal = 0;
-            items.forEach(i => {
-                const p = parseFloat(i.price || i.precio || 0);
-                const q = parseInt(i.quantity || i.qty || 1);
-                subtotal += (q >= 10 ? p * 0.9143 : p) * q;
-            });
-
-            const cashback = subtotal * 0.05;
-            const zoneSelect = document.getElementById("checkoutZoneSelect");
-            const warnBox = document.getElementById("shipping-warning-box");
-            const optFree = document.getElementById("opt-free-shipping");
-            const optPaq = document.getElementById("opt-paqueteria");
-
-            let shipping = 0;
-
-            if (subtotal === 0) {
-                shipping = 0;
-                if (warnBox) {
-                    warnBox.className = "p-3 bg-slate-900 border border-slate-800 rounded-xl text-[11px] text-slate-400 font-mono";
-                    warnBox.innerHTML = `Agrega productos para calcular el envío exacto.`;
-                }
-            } else if (subtotal >= 3000) {
-                // ENVÍO GRATIS A PARTIR DE $3,000 MXN
-                shipping = 0;
-                if (zoneSelect) zoneSelect.value = '0';
-                if (warnBox) {
-                    warnBox.className = "p-3 bg-emerald-950/70 border border-emerald-500/60 rounded-xl text-[11px] text-emerald-200 leading-relaxed font-mono flex items-start gap-2";
-                    warnBox.innerHTML = `<i class="fa-solid fa-gift text-emerald-400 text-base mt-0.5 shrink-0"></i>
-                    <span><strong>🎉 ¡CALIFICAS PARA ENVÍO GRATIS!</strong> Por superar los $3,000 MXN de compra, el despacho vía <strong>Paquetería Blindada con Firma de Entrega</strong> corre por cuenta de la tienda ($0.00 MXN).</span>`;
-                }
-            } else if (subtotal >= 2000 && subtotal < 3000) {
-                // PAQUETERÍA OBLIGATORIA DE $2,000 A $2,999 MXN
-                const diff = 3000 - subtotal;
-                if (zoneSelect && (zoneSelect.value === '35' || zoneSelect.value === '52' || zoneSelect.value === '75')) {
-                    zoneSelect.value = '180';
-                }
-                shipping = parseFloat(zoneSelect ? zoneSelect.value : 180);
-                if (warnBox) {
-                    warnBox.className = "p-3 bg-amber-950/70 border border-amber-500/60 rounded-xl text-[11px] text-amber-200 leading-relaxed font-mono flex items-start gap-2";
-                    warnBox.innerHTML = `<i class="fa-solid fa-shield-halved text-amber-400 text-base mt-0.5 shrink-0"></i>
-                    <span><strong>COMPRA ENTRE $2,000 Y $2,999 MXN:</strong> Por límites de seguro de transporte en moto, se despacha vía <strong>Paquetería Asegurada con Firma</strong> ($180 MXN) o retiro en mostrador ($0 MXN). <em>¡Agrega $${diff.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN más para obtener ENVÍO GRATIS a partir de $3,000 MXN!</em></span>`;
-                }
-            } else {
-                // COMPRAS < $2,000 MXN: MOTO UBER FLASH
-                shipping = parseFloat(zoneSelect ? zoneSelect.value : 35);
-                if (warnBox) {
-                    warnBox.className = "p-3 bg-slate-900 border border-cyan-500/40 rounded-xl text-[11px] text-cyan-200 leading-relaxed font-mono flex items-start gap-2";
-                    warnBox.innerHTML = `<i class="fa-solid fa-motorcycle text-cyan-400 text-base mt-0.5 shrink-0"></i>
-                    <span><strong>COMPRA MENOR A $2,000 MXN:</strong> Califica para <strong>Envío Exprés El Mismo Día</strong> en motocicleta vía Uber Flash con código PIN seguro.</span>`;
-                }
-            }
-
-            const total = subtotal === 0 ? 0 : (subtotal + shipping);
-
-            const elSub = document.getElementById("chk-subtotal");
-            const elCash = document.getElementById("chk-cashback");
-            const elShip = document.getElementById("chk-shipping");
-            const elTot = document.getElementById("chk-total");
-
-            if (elSub) elSub.innerText = `$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-            if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-            
-            if (elShip) {
-                if (subtotal === 0) elShip.innerText = "$0.00 MXN";
-                else if (subtotal >= 3000) elShip.innerText = "¡GRATIS! (> $3,000 MXN)";
-                else if (shipping === 0) elShip.innerText = "GRATIS (Mostrador)";
-                else elShip.innerText = `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-            }
-            
-            if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-        }
-
-        // =========================================================================
-        // FLUJO FINAL Y REGISTRO SEGURO DE CLIENTES (CRM LOCAL)
-        // =========================================================================
-        function executeFinalCheckoutFlow() {
-            const items = getCartItems();
-            if (items.length === 0) {
-                alert("⚠️ Tu carrito está vacío. Agrega productos antes de pagar.");
-                return;
-            }
-
-            const name = (document.getElementById("custName").value || '').trim();
-            const phone = (document.getElementById("custPhone").value || '').trim();
-            const email = (document.getElementById("custEmail").value || '').trim();
-            const address = (document.getElementById("custAddress").value || '').trim();
-
-            if (!name || !phone || !email || !address) {
-                expandAddressForm();
-                alert("⚠️ Por favor completa y confirma tus datos de entrega en la Sección 1.");
-                const secDom = document.getElementById("sec-domicilio-root");
-                if (secDom) secDom.scrollIntoView({ behavior: 'smooth' });
-                return;
-            }
-
-            // Calcular resumen final
-            let subtotal = 0;
-            items.forEach(i => {
-                const p = parseFloat(i.price || i.precio || 0);
-                const q = parseInt(i.quantity || i.qty || 1);
-                subtotal += (q >= 10 ? p * 0.9143 : p) * q;
-            });
-            const zoneSelect = document.getElementById("checkoutZoneSelect");
-            const shipping = subtotal >= 3000 ? 0 : parseFloat(zoneSelect ? zoneSelect.value : (subtotal > 2000 ? 180 : 35));
-            const total = subtotal + shipping;
-            const pin = localStorage.getItem('checkout_uber_pin') || '7453';
-
-            const itemsText = items.map((i, idx) => `${idx + 1}. [${i.sku}] ${i.name} (x${i.quantity}) - $${((i.quantity >= 10 ? i.price * 0.93 : i.price) * i.quantity).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`).join('\n');
-
-            if (currentPaymentMethod === 'tarjeta') {
-                const msg = `💳 *PEDIDO VECTEC - MERCADO PAGO*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos Solicitados:*\n${itemsText}\n\n📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n🚚 *Envío:* ${shipping === 0 ? 'GRATIS' : '$' + shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 }) + ' MXN'}\n💰 *Total a Liquidar:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Solicito link de cobro seguro de Mercado Pago._`;
-                const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
-                window.open(waUrl, '_blank');
-            } else if (currentPaymentMethod === 'spei') {
-                const msg = `🏛️ *PEDIDO VECTEC - PAGO SPEI*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos:*\n${itemsText}\n\n📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n🚚 *Envío:* ${shipping === 0 ? 'GRATIS' : '$' + shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 }) + ' MXN'}\n💰 *Total a Transferir:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Adjunto mi comprobante de transferencia BBVA CLABE: 012 180 01542584394 9._`;
-                const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
-                window.open(waUrl, '_blank');
-            } else {
-                const msg = `🏪 *PEDIDO VECTEC - PAGO EFECTIVO OXXO*\n\n👤 *Cliente:* ${name}\n📱 *WhatsApp:* ${phone}\n📍 *Domicilio:* ${address}\n🔑 *PIN Entrega:* ${pin}\n\n🛒 *Artículos:*\n${itemsText}\n\n💰 *Total a Pagar en Caja:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN\n\n_Solicito código de barras / referencia digital OXXO Pay._`;
-                const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
-                window.open(waUrl, '_blank');
-            }
-        }
-    </script>
+      if (window.SharedCart && typeof window.SharedCart.processOrderDispatch === 'function') {
+        window.SharedCart.processOrderDispatch({
+          storeName: "VECTEC",
+          clientName: name,
+          clientPhone: phone,
+          clientEmail: email,
+          address: address,
+          colonia: colonia,
+          city: city,
+          cp: cp,
+          references: references,
+          paymentMethod: currentPaymentMethod
+        });
+      }
+    }
+  </script>
 </body>
 </html>
