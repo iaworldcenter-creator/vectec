@@ -8,6 +8,15 @@
 
     const STORAGE_KEY = 'IAWC_MASTER_CART';
 
+    function parseCleanPrice(val) {
+        if (typeof val === 'number') return isNaN(val) ? 0 : val;
+        if (!val) return 0;
+        const clean = String(val).replace(/[^0-9.-]+/g, '');
+        const num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+    window.parseCleanPrice = parseCleanPrice;
+
     function getCart() {
         try {
             const raw = localStorage.getItem(STORAGE_KEY);
@@ -15,7 +24,7 @@
                 return JSON.parse(raw);
             }
             // Migración transparente de claves heredadas
-            for (const legacyKey of ['ecosystem_global_cart', 'cart_items', 'pc_custom_cart']) {
+            for (const legacyKey of ['vectec_cart', 'ecosystem_global_cart', 'cart_items', 'pc_custom_cart']) {
                 const leg = localStorage.getItem(legacyKey);
                 if (leg) {
                     const parsed = JSON.parse(leg);
@@ -36,6 +45,7 @@
             const json = JSON.stringify(cart);
             localStorage.setItem(STORAGE_KEY, json);
             // Sincronización con claves legadas para compatibilidad con código existente
+            localStorage.setItem('vectec_cart', json);
             localStorage.setItem('ecosystem_global_cart', json);
             localStorage.setItem('cart_items', json);
             localStorage.setItem('pc_custom_cart', json);
@@ -49,7 +59,7 @@
     function syncCartCounters() {
         const cart = getCart();
         const totalCount = cart.reduce((acc, item) => acc + (parseInt(item.qty || item.quantity) || 1), 0);
-        const totalNeto = cart.reduce((acc, item) => acc + ((parseFloat(item.price || item.precio) || 0) * (parseInt(item.qty || item.quantity) || 1)), 0);
+        const totalNeto = cart.reduce((acc, item) => acc + (parseCleanPrice(item.price || item.precio) * (parseInt(item.qty || item.quantity) || 1)), 0);
 
         document.querySelectorAll('#boutique-cart-badge, .cart-badge, #cart-count').forEach(el => {
             el.textContent = totalCount.toString();
@@ -113,7 +123,7 @@
 
         const cart = getCart();
         const totalCount = cart.reduce((acc, item) => acc + (parseInt(item.qty || item.quantity) || 1), 0);
-        const totalNeto = cart.reduce((acc, item) => acc + ((parseFloat(item.price || item.precio) || 0) * (parseInt(item.qty || item.quantity) || 1)), 0);
+        const totalNeto = cart.reduce((acc, item) => acc + (parseCleanPrice(item.price || item.precio) * (parseInt(item.qty || item.quantity) || 1)), 0);
         const subtotalSinIva = totalNeto / 1.16;
         const iva = totalNeto - subtotalSinIva;
 
@@ -195,7 +205,7 @@
         container.innerHTML = cart.map(item => {
             const sku = item.sku || item.id || '';
             const title = (item.title || item.name || item.nombre || '').replace(/'/g, "&#39;");
-            const price = parseFloat(item.price || item.precio) || 0;
+            const price = parseCleanPrice(item.price || item.precio);
             const qty = parseInt(item.qty || item.quantity) || 1;
             const itemSubtotal = price * qty;
             const storeName = item.storeName || item.tienda_origen || 'Vectec';
