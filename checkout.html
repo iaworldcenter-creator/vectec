@@ -60,15 +60,6 @@
             transition: all 0.25s ease-in-out;
         }
     </style>
-        function parseCleanPrice(val) {
-      if (typeof val === 'number') return isNaN(val) ? 0 : val;
-      if (!val) return 0;
-      const clean = String(val).replace(/[^0-9.-]+/g, '');
-      const num = parseFloat(clean);
-      return isNaN(num) ? 0 : num;
-    }
-    window.parseCleanPrice = window.parseCleanPrice || parseCleanPrice;
-
 <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -251,7 +242,11 @@
                 </div>
             </div>
 
-            <div class="space-y-2 pt-1">
+            <div class="my-2 text-center text-[11px] font-mono text-slate-300">
+    <i class="fa-solid fa-calendar-check text-amber-400 mr-1" aria-hidden="true"></i>
+    <strong>Vigencia Oficial de Precios y Ficha Técnica:</strong> Precios de lista, promociones y existencias actualizados y vigentes conforme a ficha técnica oficial del <strong>8 de Septiembre de 2026</strong>.
+</div>
+<div class="space-y-2 pt-1">
                 <div class="flex items-center justify-between">
                     <label for="checkoutZoneSelect" class="text-[11px] font-mono text-slate-300 font-bold block">
                         Modalidad y Tarifa de Entrega a Domicilio:
@@ -465,6 +460,10 @@
           <span>IVA (16% Incluido):</span>
           <span id="chk-iva" class="text-slate-300 font-mono">$0.00 MXN</span>
         </div>
+        <div id="chk-mayoreo-row" class="hidden flex justify-between text-amber-300 text-[11px] font-bold">
+          <span class="flex items-center gap-1"><i class="fa-solid fa-tags text-amber-400"></i> Descuento Mayoreo (&ge;10 pzas):</span>
+          <span id="chk-mayoreo" class="font-mono">-$0.00 MXN</span>
+        </div>
                 <div class="flex justify-between items-center text-slate-300">
                     <span class="flex items-center gap-1"><i class="fa-solid fa-key text-emerald-400"></i> PIN Chofer Uber:</span>
                     <span id="chk-summary-pin" class="text-white font-mono font-black tracking-wider text-sm bg-slate-900 px-2 py-0.5 rounded border border-emerald-500/40">7453</span>
@@ -499,7 +498,7 @@
     </main>
 
     <!-- FOOTER INSTITUCIONAL -->
-    <footer class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-12 pt-8 pb-6" aria-label="Pie de página institucional" id="pie-de-pagina">
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-4 pt-6 pb-6" aria-label="Pie de página institucional" id="pie-de-pagina">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center font-mono">
             <div class="flex flex-wrap items-center justify-center gap-3 text-slate-400 text-xs">
                 <span>📍 Pedro Moreno 501 A, Guadalajara Centro, Jalisco</span>
@@ -977,6 +976,18 @@
       }
       
       if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+      const elMayoreoRow = document.getElementById("chk-mayoreo-row");
+      const elMayoreo = document.getElementById("chk-mayoreo");
+      if (elMayoreoRow && elMayoreo) {
+        if (calc.discountMayoreo && calc.discountMayoreo > 0) {
+          elMayoreoRow.classList.remove("hidden");
+          elMayoreoRow.classList.add("flex");
+          elMayoreo.innerText = `-$${calc.discountMayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+        } else {
+          elMayoreoRow.classList.add("hidden");
+          elMayoreoRow.classList.remove("flex");
+        }
+      }
       if (elPinSummary) elPinSummary.innerText = pin;
     }
 

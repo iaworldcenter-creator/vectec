@@ -1144,9 +1144,9 @@ function renderProductCardHTML(p, viewStyle, isPriority = false) {
                         <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                             ${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}
                         </span>
-                        <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
-                            <span class="text-slate-400 line-through">${window.formatPriceDisplay(item.orig, (item.priceUsd || (item.priceMxn/19.5))*1.33)}</span>
-                            <span class="text-amber-300 font-bold">Mayoreo: ${window.formatPriceDisplay(item.may, item.mayUsd)}</span>
+                        <div class="flex items-center justify-between gap-1 text-[10px] font-mono px-1">
+                            <span class="inline-block bg-red-950/70 border border-red-500/50 text-red-300 line-through text-[10px] font-mono px-1 py-0.5 rounded shadow-sm">${window.formatPriceDisplay(item.orig, (item.priceUsd || (item.priceMxn/19.5))*1.33)}</span>
+                            <span class="text-amber-300 font-bold text-[10px]">Mayoreo: ${window.formatPriceDisplay(item.may, item.mayUsd)}</span>
                         </div>
                     </div>
 
@@ -1166,30 +1166,25 @@ function renderProductCardHTML(p, viewStyle, isPriority = false) {
                     </div>
                 </div>
 
-                <div class="pt-2 border-t border-slate-800/80 space-y-1.5">
-                    <div class="flex gap-1.5">
-                        <button 
-                            onclick="openProductDetailModal('${item.sku}')" 
-                            aria-label="Ver ficha de ${title}" 
-                            class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer border border-slate-700 min-h-[40px] flex items-center justify-center gap-1"
-                        >
-                            <i class="fa-solid fa-file-lines text-xs"></i> <span>Ficha</span>
-                        </button>
+                <div class="pt-1.5 border-t border-slate-800/80">
+                    <div class="grid grid-cols-2 gap-1">
                         <button 
                             onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `addToCartCT('${item.sku}', event)`}" 
                             aria-label="Agregar ${title} al carrito" 
-                            class="btn-action flex-1 ${item.isAgotado ? 'bg-slate-800 text-slate-400 border border-slate-700' : 'bg-blue-600 hover:bg-blue-500 text-white shadow active:scale-95'} font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer min-h-[40px] flex items-center justify-center gap-1"
+                            class="bg-slate-900 hover:bg-slate-800 text-cyan-300 font-mono text-[10px] sm:text-[11px] font-bold rounded-lg py-1 px-1.5 transition cursor-pointer border border-cyan-500/30 flex items-center justify-center gap-1 shadow active:scale-95"
+                            title="Agregar a canasta"
                         >
-                            <i class="fa-solid ${item.isAgotado ? 'fa-clock' : 'fa-cart-plus'} text-xs"></i> <span>${item.isAgotado ? 'Apartar' : '+ Carrito'}</span>
+                            <i class="fa-solid ${item.isAgotado ? 'fa-clock' : 'fa-cart-plus'} text-[10px]"></i> <span>${item.isAgotado ? 'Apartar' : 'Carrito'}</span>
+                        </button>
+                        <button 
+                            onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}', event)`}" 
+                            aria-label="Comprar ${title} ahora" 
+                            class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-mono text-[10px] sm:text-[11px] font-black rounded-lg py-1 px-1.5 flex items-center justify-center gap-1 transition cursor-pointer shadow active:scale-95"
+                            title="Comprar directo"
+                        >
+                            <i class="fa-solid ${item.isAgotado ? 'fa-hourglass-half' : 'fa-bolt text-slate-950'} text-[10px]"></i> <span>${item.isAgotado ? 'Pedir' : 'Comprar'}</span>
                         </button>
                     </div>
-                    <button 
-                        onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}', event)`}" 
-                        aria-label="Comprar ${title} ahora" 
-                        class="btn-action w-full ${item.isAgotado ? 'bg-slate-800 hover:bg-slate-750 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 hover:from-emerald-500 hover:to-cyan-500 text-white shadow-lg active:scale-95'} font-mono text-[11px] font-black rounded-xl py-2.5 uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]"
-                    >
-                        <i class="fa-solid ${item.isAgotado ? 'fa-hourglass-half text-amber-300' : 'fa-bolt text-yellow-300'}"></i> <span>${item.isAgotado ? 'Bajo Pedido' : 'Comprar Ahora'}</span>
-                    </button>
                 </div>
             </article>
         `;
