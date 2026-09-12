@@ -198,11 +198,22 @@
             const cleanRaw = rawSku.replace(/^[AB]-/, "");
 
             // Buscar en todos los catálogos posibles en memoria
+            const normMatch = p => {
+                if (!p) return false;
+                const s = String(p.sku || p.s || p.id || "").trim();
+                const sClean = s.replace(/^[AB]-/, "");
+                return s === rawSku || sClean === cleanRaw || s === cleanRaw || sClean === rawSku;
+            };
+
             const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || window.searchCatalog || [];
-            item = all.find(p => p.sku === rawSku || p.sku === cleanRaw || p.s === rawSku || p.id === rawSku || p.id === cleanRaw);
+            item = all.find(normMatch);
 
             if (!item && window.inventory && Array.isArray(window.inventory)) {
-                item = window.inventory.find(p => p.sku === rawSku || p.sku === cleanRaw || p.id === rawSku);
+                item = window.inventory.find(normMatch);
+            }
+
+            if (!item && window._currentDeptItems && Array.isArray(window._currentDeptItems)) {
+                item = window._currentDeptItems.find(normMatch);
             }
 
             // Si aún no se encuentra, buscar en el catálogo del buscador si está preindexado
