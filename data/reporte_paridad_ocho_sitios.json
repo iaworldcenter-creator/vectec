@@ -1,0 +1,169 @@
+{
+  "fecha": "2026-10-03 21:50:56",
+  "lista_origen": "1314 LISTA DE PRECIOS DE CT TOL 100526.xlsx",
+  "sitios_evaluados": [
+    {
+      "sitio": "pc-custom-lab",
+      "carpeta": "pc-custom-lab\\data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    },
+    {
+      "sitio": "ofertas-y-liquidaciones",
+      "carpeta": "ofertas-y-liquidaciones\\data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    },
+    {
+      "sitio": "bazar-viamx-nfl.gdl",
+      "carpeta": "bazar-viamx-nfl.gdl\\data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    },
+    {
+      "sitio": "mi-puesto-bazar",
+      "carpeta": "mi-puesto-bazar\\data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    },
+    {
+      "sitio": "kiosco-digital",
+      "carpeta": "kiosco-digital\\data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    },
+    {
+      "sitio": "dulces-bazar",
+      "carpeta": "dulces-bazar\\data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    },
+    {
+      "sitio": "cigarros-bazar",
+      "carpeta": "cigarros-bazar\\data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    },
+    {
+      "sitio": "sitios-web (raiz)",
+      "carpeta": "data",
+      "compact_items": 17899,
+      "compact_kb": 12758.2,
+      "search_kb": 6252.9,
+      "depts_partitions": 83,
+      "ultima_modificacion": "2026-10-03 21:50:49",
+      "estado": "ACTUALIZADO Y EN PARIDAD"
+    }
+  ],
+  "total_discrepancias": 0,
+  "muestreo_skus": [
+    {
+      "sku": "A-CPUINT4720",
+      "nombre": "Procesador Intel® Core™ Ultra 9 285K, LGA 185",
+      "precio_oficial_mxn": 18413.04,
+      "precios_en_sitios": {
+        "pc-custom-lab": 18413.04,
+        "ofertas-y-liquidaciones": 18413.04,
+        "bazar-viamx-nfl.gdl": 18413.04,
+        "mi-puesto-bazar": 18413.04,
+        "kiosco-digital": 18413.04,
+        "dulces-bazar": 18413.04,
+        "cigarros-bazar": 18413.04,
+        "sitios-web (raiz)": 18413.04
+      },
+      "discrepancias": 0
+    },
+    {
+      "sku": "A-DDUSGT2010",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf Pro NAS 2",
+      "precio_oficial_mxn": 30062.42,
+      "precios_en_sitios": {
+        "pc-custom-lab": 30062.42,
+        "ofertas-y-liquidaciones": 30062.42,
+        "bazar-viamx-nfl.gdl": 30062.42,
+        "mi-puesto-bazar": 30062.42,
+        "kiosco-digital": 30062.42,
+        "dulces-bazar": 30062.42,
+        "cigarros-bazar": 30062.42,
+        "sitios-web (raiz)": 30062.42
+      },
+      "discrepancias": 0
+    },
+    {
+      "sku": "A-SOFDLL1140",
+      "nombre": "Windows Server DELL 2025 Essentials Edition 6",
+      "precio_oficial_mxn": 11677.34,
+      "precios_en_sitios": {
+        "pc-custom-lab": 11677.34,
+        "ofertas-y-liquidaciones": 11677.34,
+        "bazar-viamx-nfl.gdl": 11677.34,
+        "mi-puesto-bazar": 11677.34,
+        "kiosco-digital": 11677.34,
+        "dulces-bazar": 11677.34,
+        "cigarros-bazar": 11677.34,
+        "sitios-web (raiz)": 11677.34
+      },
+      "discrepancias": 0
+    },
+    {
+      "sku": "A-MBDGIG5700",
+      "nombre": "Motherboard GIGABYTE X870E AORUS PRO X ICE Ch",
+      "precio_oficial_mxn": 11743.88,
+      "precios_en_sitios": {
+        "pc-custom-lab": 11743.88,
+        "ofertas-y-liquidaciones": 11743.88,
+        "bazar-viamx-nfl.gdl": 11743.88,
+        "mi-puesto-bazar": 11743.88,
+        "kiosco-digital": 11743.88,
+        "dulces-bazar": 11743.88,
+        "cigarros-bazar": 11743.88,
+        "sitios-web (raiz)": 11743.88
+      },
+      "discrepancias": 0
+    },
+    {
+      "sku": "A-STOHPE840",
+      "nombre": "HPE MSA 2070 (P84182-B25) SFF 2x32Gb FC 4-por",
+      "precio_oficial_mxn": 5163985.9,
+      "precios_en_sitios": {
+        "pc-custom-lab": 5163985.9,
+        "ofertas-y-liquidaciones": 5163985.9,
+        "bazar-viamx-nfl.gdl": 5163985.9,
+        "mi-puesto-bazar": 5163985.9,
+        "kiosco-digital": 5163985.9,
+        "dulces-bazar": 5163985.9,
+        "cigarros-bazar": 5163985.9,
+        "sitios-web (raiz)": 5163985.9
+      },
+      "discrepancias": 0
+    }
+  ]
+}

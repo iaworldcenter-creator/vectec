@@ -1,0 +1,239 @@
+{
+  "fecha": "2026-10-03",
+  "archivo_precios": "1314 LISTA DE PRECIOS DE CT TOL 100526.xlsx",
+  "archivo_configs": "1314 CONFIGURACIONES TOL 100526.xlsx",
+  "total_procesados_ct": 16246,
+  "total_turnkey_configs": 12,
+  "total_skus_nuevos": 102,
+  "cambios_precio": {
+    "subio": 633,
+    "bajo": 98,
+    "igual": 15413
+  },
+  "conteo_por_categoria": {
+    "accesorios_perifericos": 6292,
+    "cables_adaptadores": 797,
+    "punto_de_venta": 592,
+    "monitores_pantallas": 551,
+    "switches_red": 408,
+    "camaras_seguridad_cctv": 403,
+    "antivirus_seguridad_digital": 401,
+    "tarjetas_microsd": 377,
+    "routers_access_points": 368,
+    "ratones_mouse": 304,
+    "laptops_portatiles": 253,
+    "no_breaks_ups": 248,
+    "software_contable_administrativo": 237,
+    "mochilas_fundas_maletines": 237,
+    "gabinetes": 228,
+    "toners_laser": 227,
+    "bocinas_sonido": 203,
+    "diademas_headsets": 198,
+    "cargadores_baterias_powerbanks": 193,
+    "enfriamiento": 186,
+    "teclados": 181,
+    "cableado_estructurado": 176,
+    "tarjetas_madre": 162,
+    "combos_teclado_mouse": 161,
+    "gaming_consolas_sillas": 157,
+    "memorias_usb_pendrives": 127,
+    "garantias_polizas_servicio": 121,
+    "discos_duros_hdd_internos": 114,
+    "escaneres_digitalizadores": 114,
+    "procesadores": 111,
+    "fibra_optica_transceivers": 109,
+    "reguladores_voltaje": 106,
+    "soportes_ergonomia": 105,
+    "grabadores_dvr_nvr": 100,
+    "proyectores_presentacion": 98,
+    "computadoras_ensambladas": 97,
+    "etiquetas_ribbons": 94,
+    "control_acceso_biometricos": 92,
+    "memorias_ram_pc": 82,
+    "fuentes_energia": 72,
+    "antenas_radioenlaces": 69,
+    "ssds_m2_nvme": 67,
+    "discos_duros_externos": 67,
+    "hubs_docks_estaciones": 66,
+    "mini_pcs_nuc": 65,
+    "tintas_cartuchos": 64,
+    "limpieza_mantenimiento": 63,
+    "memorias_ram_laptop": 62,
+    "sistemas_operativos": 59,
+    "tablets_ipads": 52,
+    "impresoras_multifuncionales": 51,
+    "climatizacion_aires_acondicionados": 49,
+    "memorias_ram_servidor": 47,
+    "microfonos": 43,
+    "tarjetas_video": 39,
+    "computadoras_all_in_one": 39,
+    "servidores_enterprise": 39,
+    "webcams_videoconferencia": 37,
+    "smartphones_celulares": 30,
+    "ofimatica_productividad": 30,
+    "smartwatches_wearables": 30,
+    "racks_gabinetes_servidor": 27,
+    "telefonia_conmutadores": 27,
+    "alarmas_sensores_seguridad": 21,
+    "herramientas_servicio_tecnico": 19,
+    "plotters_gran_formato": 2
+  },
+  "auditoria_software_alertas": [],
+  "total_cpus_identificados": 111,
+  "productos_con_windows_total": 1610,
+  "skus_nuevos_sin_foto_total": 102,
+  "muestras_nuevos_sin_foto": [
+    {
+      "sku": "DDUSGT1260",
+      "nombre": "Disco Duro Interno SEAGATE Barracuda PC 4TB 3.5\" SATA lll, 6 Gbit/s, 5400RPM, 256MB. ST4000DM004",
+      "categoria": "discos_duros_hdd_internos",
+      "url_ficha": ""
+    },
+    {
+      "sku": "DDUSGT1460",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf NAS 8TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST8000VN004",
+      "categoria": "discos_duros_hdd_internos",
+      "url_ficha": ""
+    },
+    {
+      "sku": "DDUSGT1990",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf NAS 4TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST4000VN006",
+      "categoria": "discos_duros_hdd_internos",
+      "url_ficha": ""
+    },
+    {
+      "sku": "DDUSGT2000",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf Pro NAS 12TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST12000NT001",
+      "categoria": "discos_duros_hdd_internos",
+      "url_ficha": ""
+    },
+    {
+      "sku": "DDUSGT2010",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf Pro NAS 20TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST20000NT001",
+      "categoria": "discos_duros_hdd_internos",
+      "url_ficha": ""
+    },
+    {
+      "sku": "DDUSGT2020",
+      "nombre": "Disco Duro Interno SEAGATE SkyHawk VideoV 20TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST20000VE003",
+      "categoria": "discos_duros_hdd_internos",
+      "url_ficha": ""
+    },
+    {
+      "sku": "MBDASS6310",
+      "nombre": "Motherboard ASUS PRIME H810M-K placa base en formato Micro-ATX con socket LGA1851 diseñada para los procesadores Intel C",
+      "categoria": "tarjetas_madre",
+      "url_ficha": ""
+    },
+    {
+      "sku": "TVIGIG3400",
+      "nombre": "TARJETA DE VIDEO GIGABYTE GV-N3050WF2OCV2-6GD Procesamiento gráfico GeForce RTX™ 3050 Reloj central 1477 MHz Núcleos CUD",
+      "categoria": "tarjetas_video",
+      "url_ficha": ""
+    },
+    {
+      "sku": "TVIGIG2090",
+      "nombre": "TARJETA DE VIDEO GIGABYTE GV-N1030D4-2GL Procesamiento gráfico GeForce® GT 1030 Reloj central Boost: 1417 MHz / Base: 11",
+      "categoria": "tarjetas_video",
+      "url_ficha": ""
+    },
+    {
+      "sku": "TVIASS3990",
+      "nombre": "Tarjeta De Video ASUS DUAL-RTX5060-O8G-A Modelo DUAL-RTX5060-O8G- A Motor gráfico NVIDIA® GeForce RTX™ 5060. Rendimiento",
+      "categoria": "tarjetas_video",
+      "url_ficha": ""
+    }
+  ],
+  "muestras_productos_nuevos": [
+    {
+      "sku": "DDUSGT1260",
+      "nombre": "Disco Duro Interno SEAGATE Barracuda PC 4TB 3.5\" SATA lll, 6 Gbit/s, 5400RPM, 256MB. ST4000DM004",
+      "categoria": "discos_duros_hdd_internos",
+      "precio": 6175.04,
+      "marca": "SEAGATE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Disco Duro Interno SEAGATE Barracuda PC 4TB 3.5\" SATA lll, 6 Gbit/s, 5400RPM, 256MB. ST4000DM004"
+    },
+    {
+      "sku": "DDUSGT1460",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf NAS 8TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST8000VN004",
+      "categoria": "discos_duros_hdd_internos",
+      "precio": 12796.88,
+      "marca": "SEAGATE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Disco Duro Interno SEAGATE IronWolf NAS 8TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST8000VN004"
+    },
+    {
+      "sku": "DDUSGT1990",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf NAS 4TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST4000VN006",
+      "categoria": "discos_duros_hdd_internos",
+      "precio": 7312.5,
+      "marca": "SEAGATE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Disco Duro Interno SEAGATE IronWolf NAS 4TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST4000VN006"
+    },
+    {
+      "sku": "DDUSGT2000",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf Pro NAS 12TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST12000NT001",
+      "categoria": "discos_duros_hdd_internos",
+      "precio": 19906.09,
+      "marca": "SEAGATE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Disco Duro Interno SEAGATE IronWolf Pro NAS 12TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST12000NT001"
+    },
+    {
+      "sku": "DDUSGT2010",
+      "nombre": "Disco Duro Interno SEAGATE IronWolf Pro NAS 20TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST20000NT001",
+      "categoria": "discos_duros_hdd_internos",
+      "precio": 30062.42,
+      "marca": "SEAGATE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Disco Duro Interno SEAGATE IronWolf Pro NAS 20TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST20000NT001"
+    },
+    {
+      "sku": "DDUSGT2020",
+      "nombre": "Disco Duro Interno SEAGATE SkyHawk VideoV 20TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST20000VE003",
+      "categoria": "discos_duros_hdd_internos",
+      "precio": 31524.92,
+      "marca": "SEAGATE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Disco Duro Interno SEAGATE SkyHawk VideoV 20TB 3.5\" SATA lll, 6 Gbit/s, 7200RPM, 256MB. ST20000VE003"
+    },
+    {
+      "sku": "MBDASS6310",
+      "nombre": "Motherboard ASUS PRIME H810M-K placa base en formato Micro-ATX con socket LGA1851 diseñada para los procesadores Intel C",
+      "categoria": "tarjetas_madre",
+      "precio": 2556.45,
+      "marca": "INTEL",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Motherboard ASUS PRIME H810M-K placa base en formato Micro-ATX con socket LGA1851 diseñada para los procesadores Intel Core Ultra (Serie 2), Socket LGA1851 con chipset Intel H810, Memoria RAM: 2 ranuras DIMM DDR5 en canal dual, con soporte para un máximo de 128 GB, Almacenamiento: 2 ranuras M.2 (M.2_1 con PCIe 4.0 x4 de hasta 64 Gbps y M.2_2 con PCIe 4.0 x2 de hasta 32 Gbps), Ranuras de Expansión: 1 ranura PCIe 4.0 x16 (con refuerzo SafeSlot Core+) y 1 ranura PCIe 4.0 x1, Conectividad y Redes: Ethernet Intel de 1 Gb (I219-V); variantes disponibles con Wi-Fi 6 y Bluetooth 5.3 (según el modelo específico WiFi-CSM), Puertos USB: USB Tipo-A trasero de 10 Gbps y puertos para USB Tipo-C frontal de 5 Gbps."
+    },
+    {
+      "sku": "TVIGIG3400",
+      "nombre": "TARJETA DE VIDEO GIGABYTE GV-N3050WF2OCV2-6GD Procesamiento gráfico GeForce RTX™ 3050 Reloj central 1477 MHz Núcleos CUD",
+      "categoria": "tarjetas_video",
+      "precio": 8562.34,
+      "marca": "GIGABYTE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "TARJETA DE VIDEO GIGABYTE GV-N3050WF2OCV2-6GD Procesamiento gráfico GeForce RTX™ 3050 Reloj central 1477 MHz Núcleos CUDA® 2304 Reloj de memoria 14000 MHz Tamaño de memoria 6 GB Tipo de memoria GDDR6 Bus de memoria 96 bits Autobús de tarjetas PCI-E 4.0 Resolución máxima digital 7680x4320 Vista múltiple 4 Tamaño de la tarjeta L=191 W=111 H=36 mm Formulario PCB ATX DirectX 12 Ultimate OpenGL 4.6 Fuente de alimentación recomendada 300W Producción DP1.4a*2 HDMI 2.1*2"
+    },
+    {
+      "sku": "TVIGIG2090",
+      "nombre": "TARJETA DE VIDEO GIGABYTE GV-N1030D4-2GL Procesamiento gráfico GeForce® GT 1030 Reloj central Boost: 1417 MHz / Base: 11",
+      "categoria": "tarjetas_video",
+      "precio": 3432.0,
+      "marca": "GIGABYTE",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "TARJETA DE VIDEO GIGABYTE GV-N1030D4-2GL Procesamiento gráfico GeForce® GT 1030 Reloj central Boost: 1417 MHz / Base: 1177 MHz en modo OC Boost: 1379 MHz / Base: 1151 MHz en modo Gaming Núcleos CUDA® 384 Reloj de memoria 2100 MHz Tamaño de memoria 2 GB Tipo de memoria DDR4 Bus de memoria 64 bits Resolución máxima digital 4096 x 2160 Vista múltiple 2 Tamaño de la tarjeta Alto=14,7 Largo=149,9 Ancho=68,9 DirectX 12 OpenGL 4.5 Fuente de alimentación recomendada 300W Producción DVI-D *1 HDMI-2.0b*1 (Resolución máxima: 4096x2160 a 60 Hz) Factor de forma Perfil bajo Accesorios Soporte de perfil bajo HDMI+DVI x1"
+    },
+    {
+      "sku": "TVIASS3990",
+      "nombre": "Tarjeta De Video ASUS DUAL-RTX5060-O8G-A Modelo DUAL-RTX5060-O8G- A Motor gráfico NVIDIA® GeForce RTX™ 5060. Rendimiento",
+      "categoria": "tarjetas_video",
+      "precio": 16787.78,
+      "marca": "ASUS",
+      "sheet": "COMPONENTES DE ENSAMBLE",
+      "desc": "Tarjeta De Video ASUS DUAL-RTX5060-O8G-A Modelo DUAL-RTX5060-O8G- A Motor gráfico NVIDIA® GeForce RTX™ 5060. Rendimiento de la IA 614 TOP. Estándar de autobús PCI Express 5.0. OpenGL OpenGL®4.6. Memoria de vídeo 8 GB GDDR7. Reloj del motor Modo OC: 2565 MHz, Modo predeterminado: 2535 MHz (Boost Clock). Núcleos CUDA 3840. Velocidad de la memoria 28 Gbps. Interfaz de memoria 128 bits. Resolución máxima digital 7680 x 4320. Interfaz Sí x 1 (HDMI 2.1b nativo), Sí x 3 (DisplayPort 2.1b nativo), Compatibilidad con HDCP Sí (2.3). Soporte máximo de pantalla 4. Compatibilidad con NVlink/Crossfire No. Fuente de alimentación recomendada 550 W. Conectores de alimentación 1 x 8 pines. Ranura 2.5 ranuras."
+    }
+  ]
+}

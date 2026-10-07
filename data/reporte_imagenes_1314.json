@@ -1,0 +1,604 @@
+{
+  "total": 118,
+  "stats": {
+    "existente": 0,
+    "existente_0": 0,
+    "heredado_local": 0,
+    "descargado_ct": 0,
+    "descargado_fabricante": 0,
+    "placeholder_generado": 118,
+    "error": 0
+  },
+  "detalles": [
+    {
+      "sku": "DDUSGT1460",
+      "status": "placeholder_generado",
+      "path": "assets/img/DDUSGT1460.webp"
+    },
+    {
+      "sku": "DDUSGT1990",
+      "status": "placeholder_generado",
+      "path": "assets/img/DDUSGT1990.webp"
+    },
+    {
+      "sku": "DDUSGT2010",
+      "status": "placeholder_generado",
+      "path": "assets/img/DDUSGT2010.webp"
+    },
+    {
+      "sku": "DDUSGT1260",
+      "status": "placeholder_generado",
+      "path": "assets/img/DDUSGT1260.webp"
+    },
+    {
+      "sku": "DDUSGT2000",
+      "status": "placeholder_generado",
+      "path": "assets/img/DDUSGT2000.webp"
+    },
+    {
+      "sku": "ECS, INTEL, GIGABYTE y ASUS",
+      "status": "placeholder_generado",
+      "path": "assets/img/ECS, INTEL, GIGABYTE y ASUS.webp"
+    },
+    {
+      "sku": "Tenemos todos los Motherboards de las siguientes marcas",
+      "status": "placeholder_generado",
+      "path": "assets/img/Tenemos todos los Motherboards de las siguientes marcas.webp"
+    },
+    {
+      "sku": "Consulta a tu ejecutivo si deseas mas información.",
+      "status": "placeholder_generado",
+      "path": "assets/img/Consulta a tu ejecutivo si deseas mas información..webp"
+    },
+    {
+      "sku": "MBDASS6310",
+      "status": "placeholder_generado",
+      "path": "assets/img/MBDASS6310.webp"
+    },
+    {
+      "sku": "TVIGIG3400",
+      "status": "placeholder_generado",
+      "path": "assets/img/TVIGIG3400.webp"
+    },
+    {
+      "sku": "DDUSGT2020",
+      "status": "placeholder_generado",
+      "path": "assets/img/DDUSGT2020.webp"
+    },
+    {
+      "sku": "TVIASS3990",
+      "status": "placeholder_generado",
+      "path": "assets/img/TVIASS3990.webp"
+    },
+    {
+      "sku": "TVIGIG2090",
+      "status": "placeholder_generado",
+      "path": "assets/img/TVIGIG2090.webp"
+    },
+    {
+      "sku": "MONLGE3740",
+      "status": "placeholder_generado",
+      "path": "assets/img/MONLGE3740.webp"
+    },
+    {
+      "sku": "m  Precios en moneda nacional",
+      "status": "placeholder_generado",
+      "path": "assets/img/m  Precios en moneda nacional.webp"
+    },
+    {
+      "sku": "CLAVES",
+      "status": "placeholder_generado",
+      "path": "assets/img/CLAVES.webp"
+    },
+    {
+      "sku": "MONASS1880",
+      "status": "placeholder_generado",
+      "path": "assets/img/MONASS1880.webp"
+    },
+    {
+      "sku": "n  Producto nuevo",
+      "status": "placeholder_generado",
+      "path": "assets/img/n  Producto nuevo.webp"
+    },
+    {
+      "sku": "r  Producto con disponibilidad limitada",
+      "status": "placeholder_generado",
+      "path": "assets/img/r  Producto con disponibilidad limitada.webp"
+    },
+    {
+      "sku": "d  Producto descontinuado",
+      "status": "placeholder_generado",
+      "path": "assets/img/d  Producto descontinuado.webp"
+    },
+    {
+      "sku": "CPUDDL6400",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6400.webp"
+    },
+    {
+      "sku": "CPUDDL6410",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6410.webp"
+    },
+    {
+      "sku": "CPUDDL6460",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6460.webp"
+    },
+    {
+      "sku": "CPUDDL6470",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6470.webp"
+    },
+    {
+      "sku": "CPUDDL6380",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6380.webp"
+    },
+    {
+      "sku": "CPUDDL6450",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6450.webp"
+    },
+    {
+      "sku": "CPUDDL6390",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6390.webp"
+    },
+    {
+      "sku": "CPUDDL6420",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6420.webp"
+    },
+    {
+      "sku": "CPUDDL6430",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6430.webp"
+    },
+    {
+      "sku": "CPUDDL6440",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUDDL6440.webp"
+    },
+    {
+      "sku": "SERDEL9160",
+      "status": "placeholder_generado",
+      "path": "assets/img/SERDEL9160.webp"
+    },
+    {
+      "sku": "AIOHPI1510",
+      "status": "placeholder_generado",
+      "path": "assets/img/AIOHPI1510.webp"
+    },
+    {
+      "sku": "AIOHPI1530",
+      "status": "placeholder_generado",
+      "path": "assets/img/AIOHPI1530.webp"
+    },
+    {
+      "sku": "RELLEV2120",
+      "status": "placeholder_generado",
+      "path": "assets/img/RELLEV2120.webp"
+    },
+    {
+      "sku": "COMHPI5070",
+      "status": "placeholder_generado",
+      "path": "assets/img/COMHPI5070.webp"
+    },
+    {
+      "sku": "CPUHYU320",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUHYU320.webp"
+    },
+    {
+      "sku": "CPUHYU330",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUHYU330.webp"
+    },
+    {
+      "sku": "CPUHYU340",
+      "status": "placeholder_generado",
+      "path": "assets/img/CPUHYU340.webp"
+    },
+    {
+      "sku": "ACPGDM210",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACPGDM210.webp"
+    },
+    {
+      "sku": "ACPGDM200",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACPGDM200.webp"
+    },
+    {
+      "sku": "Los access points inalámbricos Aruba 802.11ac ofrecen un desempeño Wi-Fi excelente se pueden implementar como access points Aruba Instant gestionados por controlador o sin controlador, en función del diseño, el ámbito y la escala de su red inalámbrica. Además, nuestros access points Wave 2 más recientes proporcionan velocidades 11ac increíbles con multigigabit de enlace ascendente con tecnología HPE Smart Rate para mejorar el desempeño de la red en entornos de alta densidad.",
+      "status": "placeholder_generado",
+      "path": "assets/img/Los access points inalámbricos Aruba 802.11ac ofrecen un desempeño Wi-Fi excelente se pueden implementar como access points Aruba Instant gestionados por controlador o sin controlador, en función del diseño, el ámbito y la escala de su red inalámbrica. Además, nuestros access points Wave 2 más recientes proporcionan velocidades 11ac increíbles con multigigabit de enlace ascendente con tecnología HPE Smart Rate para mejorar el desempeño de la red en entornos de alta densidad..webp"
+    },
+    {
+      "sku": "TELGDM290",
+      "status": "placeholder_generado",
+      "path": "assets/img/TELGDM290.webp"
+    },
+    {
+      "sku": "ACCGDM190",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCGDM190.webp"
+    },
+    {
+      "sku": "GABWAM170",
+      "status": "placeholder_generado",
+      "path": "assets/img/GABWAM170.webp"
+    },
+    {
+      "sku": "GABWAM080",
+      "status": "placeholder_generado",
+      "path": "assets/img/GABWAM080.webp"
+    },
+    {
+      "sku": "GABWAM180",
+      "status": "placeholder_generado",
+      "path": "assets/img/GABWAM180.webp"
+    },
+    {
+      "sku": "GABWAM110",
+      "status": "placeholder_generado",
+      "path": "assets/img/GABWAM110.webp"
+    },
+    {
+      "sku": "GABWAM130",
+      "status": "placeholder_generado",
+      "path": "assets/img/GABWAM130.webp"
+    },
+    {
+      "sku": "GABWAM190",
+      "status": "placeholder_generado",
+      "path": "assets/img/GABWAM190.webp"
+    },
+    {
+      "sku": "RCKWAM030",
+      "status": "placeholder_generado",
+      "path": "assets/img/RCKWAM030.webp"
+    },
+    {
+      "sku": "RCKWAM040",
+      "status": "placeholder_generado",
+      "path": "assets/img/RCKWAM040.webp"
+    },
+    {
+      "sku": "ACCWAM010",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCWAM010.webp"
+    },
+    {
+      "sku": "ACCWAM040",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCWAM040.webp"
+    },
+    {
+      "sku": "ACCWAM060",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCWAM060.webp"
+    },
+    {
+      "sku": "ACCWAM020",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCWAM020.webp"
+    },
+    {
+      "sku": "Ventajas de un telefono VozIP CISCO un Bajo costo mensual para servicio de llamadas locales y nacionales, Números de teléfono virtuales, capacidad de poder llevar el adaptador telefónico con usted y utilizar el servicio con cualquier conexión de banda ancha, Identificador de llamadas, Llamada en espera, Buzon de voz, 3 líneas de llamadas, desvio y transferencia de llamadas.",
+      "status": "placeholder_generado",
+      "path": "assets/img/Ventajas de un telefono VozIP CISCO un Bajo costo mensual para servicio de llamadas locales y nacionales, Números de teléfono virtuales, capacidad de poder llevar el adaptador telefónico con usted y utilizar el servicio con cualquier conexión de banda ancha, Identificador de llamadas, Llamada en espera, Buzon de voz, 3 líneas de llamadas, desvio y transferencia de llamadas..webp"
+    },
+    {
+      "sku": "ACCWAM030",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCWAM030.webp"
+    },
+    {
+      "sku": "ACCWAM050",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCWAM050.webp"
+    },
+    {
+      "sku": "SUPWAM010",
+      "status": "placeholder_generado",
+      "path": "assets/img/SUPWAM010.webp"
+    },
+    {
+      "sku": "PROVAN080",
+      "status": "placeholder_generado",
+      "path": "assets/img/PROVAN080.webp"
+    },
+    {
+      "sku": "PROVAN090",
+      "status": "placeholder_generado",
+      "path": "assets/img/PROVAN090.webp"
+    },
+    {
+      "sku": "ACCSYB010",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCSYB010.webp"
+    },
+    {
+      "sku": "LCTPSC1250",
+      "status": "placeholder_generado",
+      "path": "assets/img/LCTPSC1250.webp"
+    },
+    {
+      "sku": "LCTPSC1220",
+      "status": "placeholder_generado",
+      "path": "assets/img/LCTPSC1220.webp"
+    },
+    {
+      "sku": "TERHSE180",
+      "status": "placeholder_generado",
+      "path": "assets/img/TERHSE180.webp"
+    },
+    {
+      "sku": "TERHSE170",
+      "status": "placeholder_generado",
+      "path": "assets/img/TERHSE170.webp"
+    },
+    {
+      "sku": "Las licencias FPP o caja son recomendadas para su venta al público en general e incluyen la Licencia y Medio de Instalación, y son recomendados para equipos existentes que quieren actualizar o instalar nuevo software Microsoft.",
+      "status": "placeholder_generado",
+      "path": "assets/img/Las licencias FPP o caja son recomendadas para su venta al público en general e incluyen la Licencia y Medio de Instalación, y son recomendados para equipos existentes que quieren actualizar o instalar nuevo software Microsoft..webp"
+    },
+    {
+      "sku": "En el es que ma Microsoft Open License, se debe tener una compra mínima de cinco licencias de cualquier producto. Este tipo de licencias se recomiendan cuando tenemos más de 5 equipos y queremos actualizar o regularizar nuestro software. No incluye discos de instalación, y este se vende aparte.",
+      "status": "placeholder_generado",
+      "path": "assets/img/En el es que ma Microsoft Open License, se debe tener una compra mínima de cinco licencias de cualquier producto. Este tipo de licencias se recomiendan cuando tenemos más de 5 equipos y queremos actualizar o regularizar nuestro software. No incluye discos de instalación, y este se vende aparte..webp"
+    },
+    {
+      "sku": "Las licencias OEM son recomendadas para PCs nuevas y deben ser Facturadas junto con equipo nuevo o actualización de PC, para que la licencia sea válida.",
+      "status": "placeholder_generado",
+      "path": "assets/img/Las licencias OEM son recomendadas para PCs nuevas y deben ser Facturadas junto con equipo nuevo o actualización de PC, para que la licencia sea válida..webp"
+    },
+    {
+      "sku": "TERHSE160",
+      "status": "placeholder_generado",
+      "path": "assets/img/TERHSE160.webp"
+    },
+    {
+      "sku": "Licenciamiento Electronico Base",
+      "status": "placeholder_generado",
+      "path": "assets/img/Licenciamiento Electronico Base.webp"
+    },
+    {
+      "sku": "Licenciamiento Gobierno",
+      "status": "placeholder_generado",
+      "path": "assets/img/Licenciamiento Gobierno.webp"
+    },
+    {
+      "sku": "ACCESORIOS",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCESORIOS.webp"
+    },
+    {
+      "sku": "ACCKOS100",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCKOS100.webp"
+    },
+    {
+      "sku": "ACCKOS110",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCKOS110.webp"
+    },
+    {
+      "sku": "ACCKOS120",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCKOS120.webp"
+    },
+    {
+      "sku": "ACCKOS130",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCKOS130.webp"
+    },
+    {
+      "sku": "ACCBKR010",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR010.webp"
+    },
+    {
+      "sku": "ACCBKR020",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR020.webp"
+    },
+    {
+      "sku": "ACCBKR030",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR030.webp"
+    },
+    {
+      "sku": "ACCBKR040",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR040.webp"
+    },
+    {
+      "sku": "ACCBKR050",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR050.webp"
+    },
+    {
+      "sku": "ACCBKR060",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR060.webp"
+    },
+    {
+      "sku": "ACCBKR070",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR070.webp"
+    },
+    {
+      "sku": "ACCBKR080",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR080.webp"
+    },
+    {
+      "sku": "ACCBKR090",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR090.webp"
+    },
+    {
+      "sku": "ACCBKR100",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR100.webp"
+    },
+    {
+      "sku": "ACCBKR110",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR110.webp"
+    },
+    {
+      "sku": "ACCBKR120",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR120.webp"
+    },
+    {
+      "sku": "ACCBKR130",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR130.webp"
+    },
+    {
+      "sku": "ACCBKR140",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR140.webp"
+    },
+    {
+      "sku": "ACCBKR150",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR150.webp"
+    },
+    {
+      "sku": "ACCBKR160",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR160.webp"
+    },
+    {
+      "sku": "ACCBKR170",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR170.webp"
+    },
+    {
+      "sku": "ACCBKR180",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCBKR180.webp"
+    },
+    {
+      "sku": "MALSWY010",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY010.webp"
+    },
+    {
+      "sku": "MALSWY020",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY020.webp"
+    },
+    {
+      "sku": "MALSWY030",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY030.webp"
+    },
+    {
+      "sku": "MALSWY040",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY040.webp"
+    },
+    {
+      "sku": "MALSWY050",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY050.webp"
+    },
+    {
+      "sku": "MALSWY060",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY060.webp"
+    },
+    {
+      "sku": "MALSWY070",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY070.webp"
+    },
+    {
+      "sku": "MALSWY080",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY080.webp"
+    },
+    {
+      "sku": "MALSWY090",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY090.webp"
+    },
+    {
+      "sku": "MALSWY100",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY100.webp"
+    },
+    {
+      "sku": "MALSWY110",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY110.webp"
+    },
+    {
+      "sku": "MALSWY120",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY120.webp"
+    },
+    {
+      "sku": "MALSWY130",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY130.webp"
+    },
+    {
+      "sku": "BOCSWY010",
+      "status": "placeholder_generado",
+      "path": "assets/img/BOCSWY010.webp"
+    },
+    {
+      "sku": "MALSWY140",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY140.webp"
+    },
+    {
+      "sku": "MALSWY150",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY150.webp"
+    },
+    {
+      "sku": "MALSWY170",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY170.webp"
+    },
+    {
+      "sku": "MALSWY180",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY180.webp"
+    },
+    {
+      "sku": "MALSWY190",
+      "status": "placeholder_generado",
+      "path": "assets/img/MALSWY190.webp"
+    },
+    {
+      "sku": "BATSWY010",
+      "status": "placeholder_generado",
+      "path": "assets/img/BATSWY010.webp"
+    },
+    {
+      "sku": "BATSWY020",
+      "status": "placeholder_generado",
+      "path": "assets/img/BATSWY020.webp"
+    },
+    {
+      "sku": "KITSWY010",
+      "status": "placeholder_generado",
+      "path": "assets/img/KITSWY010.webp"
+    },
+    {
+      "sku": "ACCSWY010",
+      "status": "placeholder_generado",
+      "path": "assets/img/ACCSWY010.webp"
+    }
+  ]
+}
