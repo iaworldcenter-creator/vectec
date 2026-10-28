@@ -1,0 +1,314 @@
+{
+  "semana": 1317,
+  "fecha_auditoria": "2026-10-27",
+  "total_articulos": 18222,
+  "total_activos": 17778,
+  "total_cuarentena": 444,
+  "nuevas_altas_total": 71,
+  "salieron_de_cuarentena": [
+    {
+      "sku": "A-TONLXM4420",
+      "nombre": "Toner negro Lexmark 58D4U00, ultra alto rendimiento de 55K páginas para MS823dn/MS826de/MX822ade/MX826ade/MX722adhe.",
+      "categoria": "toners_laser",
+      "stk_1316": 0,
+      "stk_1317": 15,
+      "costo_usd": 512.91,
+      "precio_mxn": 16502.95,
+      "imagen": "assets/img/TONLXM4420.webp"
+    },
+    {
+      "sku": "A-TONLXM4140",
+      "nombre": "Toner negro Lexmark 55B4X00, ultra alto rendimiento de 20K páginas para MS/MX431, MX432",
+      "categoria": "toners_laser",
+      "stk_1316": 0,
+      "stk_1317": 15,
+      "costo_usd": 358.27,
+      "precio_mxn": 11527.49,
+      "imagen": "assets/img/TONLXM4140.webp"
+    },
+    {
+      "sku": "A-TONLXM4450",
+      "nombre": "Toner negro Lexmark 74C4HK0, alto rendimiento de 20K páginas para CS720de/CS725de",
+      "categoria": "toners_laser",
+      "stk_1316": 0,
+      "stk_1317": 15,
+      "costo_usd": 345.37,
+      "precio_mxn": 11112.4,
+      "imagen": "assets/img/TONLXM4450.webp"
+    },
+    {
+      "sku": "A-TONLXM4430",
+      "nombre": "Toner magenta Lexmark 74C4HM0, alto rendimiento de 12K páginas para CS720de/CS725de",
+      "categoria": "toners_laser",
+      "stk_1316": 0,
+      "stk_1317": 15,
+      "costo_usd": 330.87,
+      "precio_mxn": 10645.68,
+      "imagen": "assets/img/TONLXM4430.webp"
+    },
+    {
+      "sku": "A-TONLXM4460",
+      "nombre": "Toner cian Lexmark 74C4HC0, alto rendimiento de 12K páginas para CS720de/CS725de",
+      "categoria": "toners_laser",
+      "stk_1316": 0,
+      "stk_1317": 15,
+      "costo_usd": 330.87,
+      "precio_mxn": 10645.68,
+      "imagen": "assets/img/TONLXM4460.webp"
+    },
+    {
+      "sku": "A-TONLXM4440",
+      "nombre": "Toner amarillo Lexmark 74C4HY0, alto rendimiento de 12K páginas para CS720de/CS725de",
+      "categoria": "toners_laser",
+      "stk_1316": 0,
+      "stk_1317": 15,
+      "costo_usd": 330.87,
+      "precio_mxn": 10645.68,
+      "imagen": "assets/img/TONLXM4440.webp"
+    },
+    {
+      "sku": "A-TONLXM4010",
+      "nombre": "Toner negro Lexmark B244H00, alto rendimiento de 6K páginas para B2442dw/B2546dn/B2650dn/MX421ade/MX521ade/MX521de/MX522",
+      "categoria": "toners_laser",
+      "stk_1316": 0,
+      "stk_1317": 15,
+      "costo_usd": 144.48,
+      "precio_mxn": 4648.76,
+      "imagen": "assets/img/TONLXM4010.webp"
+    }
+  ],
+  "entraron_a_cuarentena_total": 21,
+  "entraron_a_cuarentena_muestra": [
+    {
+      "sku": "A-DDUKGT2060",
+      "nombre": "SSD KC3000 PCIe NVMe M.2 KINGSTON 2048GB SKC3000D/2048G",
+      "categoria": "ssds_m2_nvme",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 417.4,
+      "precio_mxn": 13429.84,
+      "imagen": "assets/img/DDUKGT2060.webp"
+    },
+    {
+      "sku": "A-MEMDAT7180",
+      "nombre": "Memoria USB de 256GB UC320 3.2 Gen 1 (retrocompatible 3.0 y 2.0), diseño deslizante sin tapa. Color negro. UC320-256G-RB",
+      "categoria": "memorias_usb_pendrives",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 17.78,
+      "precio_mxn": 572.0,
+      "imagen": "assets/img/MEMDAT7180.webp"
+    },
+    {
+      "sku": "A-DDUDAT2560",
+      "nombre": "Disco Duro Externo ADATA HD680 1TB 2.5\", interfaz USB 3.2 Gen1 (USB 5Gbps). Resistente a golpes. NEGRO AHD680-1TU31-CBK",
+      "categoria": "discos_duros_externos",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 63.67,
+      "precio_mxn": 2048.48,
+      "imagen": "assets/img/DDUDAT2560.webp"
+    },
+    {
+      "sku": "A-DDUDAT1480",
+      "nombre": "Unidad de Estado Sólido ADATA SU630 SATAIII, 1.9 2TB. N.P. ASU630SS-1T92Q-R",
+      "categoria": "discos_duros_hdd_internos",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 187.22,
+      "precio_mxn": 6023.87,
+      "imagen": "assets/img/DDUDAT1480.webp"
+    },
+    {
+      "sku": "A-DDUDAT2360",
+      "nombre": "Unidad de Estado Sólido ADATA LEGEND 710 256GB PCIe Gen3x4 M.2 2280, Con disipador de aluminio. ALEG-710-256GCS",
+      "categoria": "ssds_m2_nvme",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 57.44,
+      "precio_mxn": 1848.28,
+      "imagen": "assets/img/DDUDAT2360.webp"
+    },
+    {
+      "sku": "A-VENCLR630",
+      "nombre": "Enfriamiento Liquido Cooler Master Masterliquid ML240L Core II (MLW-D24M-A18PA-R1), ARGB Socket Intel® LGA 1851/1700/120",
+      "categoria": "accesorios_perifericos",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 74.07,
+      "precio_mxn": 2383.1,
+      "imagen": "assets/img/VENCLR630.webp"
+    },
+    {
+      "sku": "A-CPUMAC1080",
+      "nombre": "Computadora de escritorio Mac Mini Apple MGNT3LZ/A. Chip M1 de Apple CPU de 8 núcleos con 4 núcleos de rendimiento y 4 d",
+      "categoria": "computadoras_ensambladas",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 1023.48,
+      "precio_mxn": 32930.53,
+      "imagen": "assets/img/CPUMAC1080.webp"
+    },
+    {
+      "sku": "A-RCKACC2560",
+      "nombre": "RACK ABIERTO 19\" PARA MONTAJE EN PARED,4 POSTES,15U (716161) Rack abierto para montaje en pared de 19\" (716161)con 4 pos",
+      "categoria": "racks_gabinetes_servidor",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 132.64,
+      "precio_mxn": 4267.61,
+      "imagen": "assets/img/RCKACC2560.webp"
+    },
+    {
+      "sku": "A-CAMDAH3820",
+      "nombre": "Cámara IP DAHUA Bala IPC-HFW1431S1-A-S4, 4 Megapixeles, Compresión H.265+, Lente de 2.8 mm, apertura 104°, IR de 30 Mts,",
+      "categoria": "camaras_seguridad_cctv",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 62.09,
+      "precio_mxn": 1997.6,
+      "imagen": "assets/img/CAMDAH3820.webp"
+    },
+    {
+      "sku": "A-ACCSNY1450",
+      "nombre": "Sony PlayStation 5 Slim 1TB Versión Digital color blanco. 1000044177 Incluye Juego ASTROBOT Experimenta el poder de la p",
+      "categoria": "gaming_consolas_sillas",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 492.22,
+      "precio_mxn": 15837.25,
+      "imagen": "assets/img/placeholders/acc_placeholder.jpg"
+    },
+    {
+      "sku": "A-MOULOG1660",
+      "nombre": "Mouse inalambrico. Logitech. M720 TRIATHLON. 910-004790. DISEÑO RESISTENTE, VERSÁTIL Y CÓMODO. Diseño contorneado. TECNO",
+      "categoria": "ratones_mouse",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 54.9,
+      "precio_mxn": 1766.47,
+      "imagen": "assets/img/MOULOG1660.webp"
+    },
+    {
+      "sku": "A-BOCMST4250",
+      "nombre": "PC-201113 Teclado Inalámbrico Antiderrames Dapper | PERFECT CHOICE: ¡Diseñado para Trabajar con Comodidad y Tranquilidad",
+      "categoria": "bocinas_sonido",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 8.38,
+      "precio_mxn": 269.5,
+      "imagen": "assets/img/BOCMST4250.webp"
+    },
+    {
+      "sku": "A-ACCKNS2250",
+      "nombre": "Pantalla de privacidad MagPro de 23,6\" (16:9) K60730WW KENSINGTON, Confíe en Kensington, la elección de los profesionale",
+      "categoria": "accesorios_perifericos",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 47.35,
+      "precio_mxn": 1523.44,
+      "imagen": "assets/img/ACCKNS2250.webp"
+    },
+    {
+      "sku": "A-MOUITL790",
+      "nombre": "Mouse óptico Gaming LED con cable (179348) MANHATTAN Mouse óptico LED para juegos con cable combina un diseño moderno co",
+      "categoria": "ratones_mouse",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 5.14,
+      "precio_mxn": 165.47,
+      "imagen": "assets/img/MOUITL790.webp"
+    },
+    {
+      "sku": "A-ACCITL7600",
+      "nombre": "180887 Hub USB 3.0 Tipo-A de 4 puertos, interruptor de encendido/apagado para cada puerto negro: Añade cuatro puertos US",
+      "categoria": "accesorios_perifericos",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 14.86,
+      "precio_mxn": 478.03,
+      "imagen": "assets/img/ACCITL7600.webp"
+    },
+    {
+      "sku": "A-BOCITL630",
+      "nombre": "Sistema de Altavoces, Serie 2600 (161435) Manhattan Sonido estereofónico de amplio rango y tamaño compacto, se conectan",
+      "categoria": "diademas_headsets",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 5.89,
+      "precio_mxn": 189.52,
+      "imagen": "assets/img/BOCITL630.webp"
+    },
+    {
+      "sku": "A-ACCITL3570",
+      "nombre": "Soporte para pantalla 37\" a 70\" (424752) Asegura un monitor plano de televisión, Mejora la posición visual con ajustes v",
+      "categoria": "accesorios_perifericos",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 31.76,
+      "precio_mxn": 1021.82,
+      "imagen": "assets/img/ACCITL3570.webp"
+    },
+    {
+      "sku": "A-CABITL2810",
+      "nombre": "Cable Patch Cat6, UTP Blanco (341998) INTELLINET Cable de red con contactos con baño de oro para una mejor conexión, cab",
+      "categoria": "cables_adaptadores",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 7.76,
+      "precio_mxn": 249.62,
+      "imagen": "assets/img/CABITL2810.webp"
+    },
+    {
+      "sku": "A-CABITL4770",
+      "nombre": "Cable adaptador de USB-C a HDMI de 4K@60Hz (153591) Manhattan USB-C macho a HDMI macho, 1 m (3 pies), contactos chapados",
+      "categoria": "accesorios_perifericos",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 14.01,
+      "precio_mxn": 450.8,
+      "imagen": "assets/img/CABITL4770.webp"
+    },
+    {
+      "sku": "A-CABITL4790",
+      "nombre": "Cable Auxiliar de Audio Estéreo (355988) Manhattan Dos conectores macho de 3.5 mm, 1 m (3 ft), contactos chapados en oro",
+      "categoria": "cables_adaptadores",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 2.34,
+      "precio_mxn": 75.31,
+      "imagen": "assets/img/CABITL4790.webp"
+    },
+    {
+      "sku": "A-CABITL4800",
+      "nombre": "Cable Auxiliar de Audio Estéreo (355995) Manhattan Dos conectores macho de 3.5 mm, 2 m (7 ft), contactos chapados en oro",
+      "categoria": "cables_adaptadores",
+      "stk_1316": 15,
+      "stk_1317": 0,
+      "costo_usd": 2.71,
+      "precio_mxn": 87.33,
+      "imagen": "assets/img/CABITL4800.webp"
+    }
+  ],
+  "fotos_cuarentena_preservadas": 431,
+  "fotos_cuarentena_faltantes": [
+    "A-ACCSNY1450",
+    "A-COMHUA540",
+    "A-COMHUA560",
+    "A-CELHUW170",
+    "A-CELHUW330",
+    "A-CELHUW340",
+    "A-MOUKNS050",
+    "A-ACCHUW1600",
+    "A-SERDDL190",
+    "A-ACCQIA460",
+    "A-CPUGEK030",
+    "A-CPUGEK070",
+    "A-SOFAPL7210"
+  ],
+  "precios_correctos": 16465,
+  "discrepancias_costo": 0,
+  "discrepancias_precio_orig": 0,
+  "discrepancias_precio_venta": 0,
+  "paridad_8_sitios": true
+}
