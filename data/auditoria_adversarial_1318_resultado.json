@@ -1,0 +1,18 @@
+{
+  "fecha": "2026-11-05",
+  "semana": 1318,
+  "total_articulos": 18260,
+  "total_activos": 17698,
+  "total_cuarentena": 562,
+  "nuevas_altas": 38,
+  "salidas_cuarentena": 1,
+  "entradas_cuarentena": 119,
+  "permanecen_cuarentena": 443,
+  "fotos_cuarentena_preservadas": 521,
+  "fotos_cuarentena_placeholder": 41,
+  "fotos_cuarentena_faltantes": 0,
+  "colisiones_detectadas": 0,
+  "incongruencias_socket": 0,
+  "precios_exactos": 16385,
+  "discrepancias_precio_venta": 0
+}
