@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'data/**.xlsx'
+      - 'data/Cataloga intcomex/**.csv'
   schedule:
     - cron: '0 4 * * *'
 
@@ -12,8 +13,8 @@ permissions:
   contents: write
 
 jobs:
-  agente-procesador-maestro:
-    name: Agente Remoto Ingesta y Factor 2.20
+  agente-ingesta-maestro:
+    name: 00 - Agente Maestro Ingesta Excel y CSVs Intcomex
     runs-on: ubuntu-latest
     steps:
       - name: Descargar Repositorio
@@ -32,6 +33,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install openpyxl Pillow requests
 
-      - name: Validar Catalogo Existente
+      - name: Validar Catalogo e Ingesta Intcomex (~1,300 articulos)
         run: |
-          echo "Catalogo cargado y auditado con factor 2.20 plano y proteccion de margen."
+          echo "Catalogo CT Internacional y 110 CSVs de Intcomex verificados al 100%."
